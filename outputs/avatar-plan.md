@@ -25,7 +25,7 @@ Decision sequence: the owner requested rigged anime and cross-app floating prese
 | Selection | Files do not sync | Propose device-local override and references; other devices retain their valid gallery/ball appearance until separately imported |
 | Limits | One main AI companion | Propose one active imported model per account/device; bytes/file counts/textures/runtime limits need evidence |
 | Motion | Live conversational behavior | Ball design and supported rig mappings pending; not every asset provides mouth/expressions/motions |
-| Floating delivery | Above other applications is confirmed | First OS targets and web/floating rollout sequence pending T078 |
+| Floating delivery | Above other applications in the first release is confirmed | First OS targets pending T078; T082 is a required first-release gate |
 
 Proposals are not owner-confirmed details. No multi-runtime compatibility or free commercial SDK release is promised.
 
@@ -59,13 +59,13 @@ Release frame loops, GPU resources, object URLs, and audio-analysis connections 
 
 ## Cross-App Floating Companion
 
-Keep the owner's confirmed floating presence and hideable controls. Exact platforms and release sequence remain open. An in-page widget does not satisfy presence above other applications.
+The owner confirmed floating presence and hideable controls in the first release on October 9, 2026. Exact first platforms remain open. An in-page widget does not satisfy presence above other applications.
 
 - Desktop: evaluate transparent/always-on-top clients and OS compatibility; no Tauri/Electron choice yet.
 - Android: validate application-overlay permission, touch routing, foreground microphone/service restrictions, notifications, and explicit pause/exit. Overlay permission does not grant unrestricted background capture.
 - Browser Document PiP is a potential desktop prototype; it does not establish a transparent, freely positioned pet on every OS/mobile browser.
 - iOS/iPadOS: verify supported system alternatives and limits; do not promise an unrestricted interactive overlay. Label in-app fallbacks accurately.
-- Web and floating gates require an explicit sequencing decision. A web-first trial can be approved separately without claiming full floating delivery complete.
+- Web and selected floating targets ship in the same first release. Development/staging may be incremental, but a web-only build does not pass the selected first-release gate. T082 must pass for the chosen floating OS targets.
 - Reuse authorization, memory, origin-only audio, and quota rules. A second view controlling the same session must not duplicate capture/timers; genuine independent sessions retain existing summed usage.
 - Local browser assets are not automatically available to a native client. No cloud transfer is implied.
 

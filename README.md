@@ -27,7 +27,7 @@ Start with the blueprint, launch plan, and progress tracker. Assign one backlog 
 - Cloudflare for hosting and the verified deployment/runtime path.
 - OpenRouter for the cascaded transcription, conversation, and speech pipeline.
 - Thai/English conversation, a minimal lavender ball, optional first-release local rigged-2D import, and user-controlled personalization memory.
-- Cross-app floating companion retained; first operating systems and web/floating rollout sequence still require selection. User model files remain device-local.
+- Cross-app floating companion retained; first-release inclusion is confirmed; supported operating systems still require selection. User model files remain device-local.
 
 Exact model availability, deployment compatibility, voice quality, latency, and operating costs still require verification. Historical estimates and selected model identifiers are not proof that live integrations work.
 
