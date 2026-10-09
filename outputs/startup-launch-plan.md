@@ -16,7 +16,7 @@ The deployable online product is the outcome. A browser-based delivery platform 
 
 ## Four-Person Team
 
-The owner reports a four-person project team with limited experience and no clear work ownership yet. The previously suggested product/frontend/backend/voice division is a proposal, not an approved assignment or equity arrangement.
+The owner reports a four-person project team with limited experience and has identified themself as the developer. Suggested responsibilities for the other three people are product/user research, UX/UI/conversation design, and QA/trial operations. These remain proposals; named task owners/reviewers and equity arrangements have not been assigned.
 
 The Director defines milestones, writes bounded work briefs, reviews evidence, and recommends tradeoffs. The team must identify one responsible person and one reviewer for each actual assignment. Human responsibilities, Executor identities, and availability remain unassigned.
 
@@ -54,4 +54,4 @@ Do not add a native client, paid monitoring service, embedding provider, in-app 
 
 ## Next Director Action
 
-The platform answer is recorded. The prepared replacement is `executor-brief-02-production-foundation.md`, beginning with free capability/runtime verification and production architecture evidence. Identify who executes and who reviews before dispatch; real external setup and paid tests need bounded assignments and funding. The earlier mock-only Brief 01 must not be used as the startup MVP assignment.
+The platform answer is recorded. `task-backlog.md` splits delivery into 69 tasks, `requirements-coverage.md` maps all 182 discovery decisions and later instructions, and `progress_tracking.md` records current task states and evidence. Start with the ready capability/runtime research tasks and independent product/design work; assign one task at a time with a responsible person and reviewer. Brief 02 supplies the foundation checklist; its earlier mock-only predecessor must not be used as the startup MVP assignment. Real setup, funded tests, and deployment retain their documented dependencies. The public GitHub repository versus earlier private-repository plan is an explicit alignment issue in T069.

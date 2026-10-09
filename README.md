@@ -11,10 +11,13 @@ This repository contains product planning and an implementation handoff. Applica
 - [Project blueprint](outputs/blueprint.md): English product specification, behavior, folder structure, and decision history.
 - [Startup launch plan](outputs/startup-launch-plan.md): delivery milestones and real online release criteria.
 - [Build agent prompt](outputs/build-agent-prompt.md): instructions to give an AI implementation agent alongside the project documents.
+- [Small-task backlog](outputs/task-backlog.md): 69 bounded tasks with dependencies, suggested roles, and acceptance evidence.
+- [Progress tracker](outputs/progress_tracking.md): authoritative task states, evidence, release gates, and blockers.
+- [Requirements coverage](outputs/requirements-coverage.md): mapping of all 182 discovery decisions and later instructions to work assignments.
 - [Production foundation brief](outputs/executor-brief-02-production-foundation.md): model/runtime feasibility and integration checklist.
 - [Earlier prototype brief](outputs/executor-brief-01.md): superseded historical planning; do not use as the current build assignment.
 
-Start with the blueprint and launch plan. Give the build agent the complete build prompt and source documents. Planning files include paths from the original Windows workspace; map them to your checkout before implementation. The planned application directory is `work/laven-ai/`.
+Start with the blueprint, launch plan, and progress tracker. Assign one backlog task using the copyable single-task prompt, with the build prompt as supporting guidance. Planning files include paths from the original Windows workspace; map them to your checkout before implementation. The planned application directory is `work/laven-ai/`.
 
 ## Selected direction
 

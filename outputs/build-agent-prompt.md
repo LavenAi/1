@@ -1,6 +1,6 @@
 # Laven AI - Build Agent Prompt
 
-Usage: Give the agent the entire prompt below together with `blueprint.md` and `startup-launch-plan.md`. Include `executor-brief-02-production-foundation.md` for the detailed feasibility checklist. These files must be readable by the agent; mentioning a path does not attach a file. If using another workspace, map the source documents and application root to that workspace before starting.
+Usage: For a bounded assignment, use the single-task prompt in `task-backlog.md` and provide this build prompt as supporting guidance. Give the agent `blueprint.md`, `startup-launch-plan.md`, `task-backlog.md`, `progress_tracking.md`, and `requirements-coverage.md`. Include `executor-brief-02-production-foundation.md` for the detailed feasibility checklist. These files must be readable by the agent; mentioning a path does not attach a file. If using another workspace, map the source documents and application root to that workspace before starting.
 
 This is an implementation handoff prepared by the Director. Writing this prompt has not started development, dispatched an agent, provisioned services, or authorized spending. The instructions below take effect when the owner gives them to the build agent.
 
@@ -24,6 +24,8 @@ Read these documents fully, in manageable sections if necessary:
 1. `outputs/blueprint.md` - product behavior, folder structure, constraints, defaults, and decision history.
 2. `outputs/startup-launch-plan.md` - online release outcomes and acceptance gates.
 3. `outputs/executor-brief-02-production-foundation.md` - model, runtime, authentication, cost, and integration feasibility checklist.
+4. `outputs/task-backlog.md` and `outputs/progress_tracking.md` - bounded assignments, prerequisites, current status, reviewers, and evidence.
+5. `outputs/requirements-coverage.md` - decision-to-task mapping, superseded/later work, and unresolved alignment issues.
 
 Planned application root:
 `C:/Users/phetm/Documents/Codex/2026-09-30/cha/work/laven-ai`
@@ -34,10 +36,11 @@ Interpretation rules:
 - Follow the owner's current instructions. For product decisions, use the latest applicable confirmed or explicitly delegated outcome, not an older superseded option.
 - Proposed implementation defaults are starting points you may refine while preserving selected behavior and budget.
 - Historical cost tables and model-capability statements require current verification; they are not evidence of present availability or measured app performance.
-- The local mock-only Brief 01 is superseded. Section 6 of the blueprint and the startup launch plan override its stale reference in Section 3. Keep planning files in the planning workspace's `outputs/`; implement application code under the application root.
+- The local mock-only Brief 01 is superseded. Use Brief 02 for the foundation checklist and the task backlog for bounded assignments. Keep planning files in the planning workspace's `outputs/`; implement application code under the application root.
 - Earlier statements that no Executor was assigned describe the previous planning state. This prompt assigns implementation work when issued by the owner. Carry out Brief 02's feasibility checks first, then continue with reversible implementation without waiting for approval of every routine step. External access, actual funding, and material product changes remain separate dependencies.
 - If documents conflict on a material behavior and the latest decision does not resolve it, record the conflict and ask one focused question. Continue work that does not depend on the answer.
 - If essential source files are missing, request those files before inventing a replacement specification.
+- When the owner assigns a specific backlog task, that task bounds this handoff. Carry out only its scope and acceptance checks, report for review, update the shared progress tracker accurately, and stop at its review boundary. The whole-MVP completion criteria below remain the eventual product target; they do not authorize automatically starting other tasks.
 </source_documents>
 
 <creative_direction>

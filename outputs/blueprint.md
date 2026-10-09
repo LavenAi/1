@@ -319,7 +319,7 @@ To define together: detailed page layouts, remaining button behavior, navigation
 
 ## 3. Folder Structure
 
-Planned application root: `C:/Users/phetm/Documents/Codex/2026-09-30/cha/work/laven-ai`. The tree below is relative to that project root. Planning artifacts remain in `outputs/`. No application source has been created at this checkpoint. The first Executor assignment is specified in `outputs/executor-brief-01.md`.
+Planned application root: `C:/Users/phetm/Documents/Codex/2026-09-30/cha/work/laven-ai`. The tree below is relative to that project root. Planning artifacts remain in `outputs/`. No application source has been created at this checkpoint. The current foundation checklist is `outputs/executor-brief-02-production-foundation.md`; Brief 01 is superseded. Use `outputs/task-backlog.md` for bounded assignments and `outputs/progress_tracking.md` for their current status.
 
 Use the following planned structure for the selected Next.js/TypeScript application. These paths describe future implementation; application code and services have not been created yet. The specification remains in `outputs/blueprint.md`.
 
@@ -755,6 +755,8 @@ To define together: authentication implementation and account lifecycle, data st
 ## 6. Delivery Plan
 
 The deliverable is an online startup MVP, not a local-only prototype. The Director's launch milestones are defined in `outputs/startup-launch-plan.md`; the former local-prototype Executor Brief 01 is superseded and must not be dispatched as the current assignment. The current prepared assignment is `outputs/executor-brief-02-production-foundation.md`; no Executor has been assigned or started. Local tooling and mocked tests may support development, but do not satisfy online release acceptance.
+
+The October 9 task breakdown is in `outputs/task-backlog.md` (69 tasks). `outputs/requirements-coverage.md` maps all 182 discovery decisions and later instructions; `outputs/progress_tracking.md` is the authoritative status/evidence tracker. Use one bounded task per implementation handoff. Coverage mapping does not mean implementation is complete. T069 records the current public GitHub repository versus the earlier private-repository plan without changing repository visibility.
 
 The owner has requested a minimal-budget approach. Keep the existing USD 10/month AI ceiling as a planning control; it is not funded credit or authorization to purchase usage. Identify actual funding, domain, email, hosting, and inference dependencies before promising a launch cost or date. No paid calls or external setup have been authorized by this planning revision.
 
