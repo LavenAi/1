@@ -1,11 +1,11 @@
 # Laven AI - Avatar and Floating Companion Plan
 
-Revision R001 - updated October 9, 2026.
+Revision R001 - updated October 10, 2026.
 Status: Director planning. No renderer, importer, SDK, model purchase, native client, or device acceptance completed.
 
 ## Confirmed Scope
 
-- First-release default: a simple minimalist lavender ball, alive during actual listening, thinking, and speaking.
+- First-release default: a simple minimalist lavender ball with eyes and a mouth capable of changing shapes, confirmed October 10, 2026. It responds to actual listening, thinking, and speaking.
 - First-release alternative: users import their purchased, already rigged 2D anime model to replace the ball.
 - Model files stay locally on the importing user's device. No cloud upload, model-file sync, provider submission, sharing, or repository copy.
 - The same AI companion, account, personality, voice, history, and memory continue. Existing gallery choices remain available.
@@ -24,7 +24,7 @@ Decision sequence: the owner requested rigged anime and cross-app floating prese
 | Persistence | Device-local files | Propose account-partitioned browser storage; native clients need a separate local store |
 | Selection | Files do not sync | Propose device-local override and references; other devices retain their valid gallery/ball appearance until separately imported |
 | Limits | One main AI companion | Propose one active imported model per account/device; bytes/file counts/textures/runtime limits need evidence |
-| Motion | Live conversational behavior | Ball design and supported rig mappings pending; not every asset provides mouth/expressions/motions |
+| Motion | Ball has eyes and a shape-changing mouth; live conversational behavior | Exact mouth shapes and audio-energy versus phoneme/viseme alignment pending; supported mappings differ for imported rigs |
 | Floating delivery | Windows floating in the first release is confirmed | T078 verifies supported Windows versions/runtime; T082 is required. Android floating and other desktop OS targets are later. |
 
 Proposals are not owner-confirmed details. No multi-runtime compatibility or free commercial SDK release is promised.
@@ -35,7 +35,7 @@ Settings > My Companion includes the ball, existing gallery, and local model imp
 
 Failed import preserves the previous working appearance. Removing a model deletes the app's local copy and releases its resources; it never deletes the user's original purchased files. Other devices/browser profiles/native clients require separate imports. Keep captions below the active companion and conversation controls usable.
 
-The ball can be built with a lightweight code/SVG/canvas approach; a 3D engine or commercial mascot is not mandatory. Facial features and exact motions remain design proposals.
+The ball can be built with a lightweight code/SVG/canvas approach; a 3D engine or commercial mascot is not mandatory. Eyes and a shape-changing mouth are owner-confirmed for the default ball. Exact eye styling, blink/expression behavior, shape inventory, and mouth synchronization method remain proposals/pending details. Do not assume phoneme-accurate lip-sync is selected or implemented.
 
 ## Local Privacy, Validation, and Lifecycle
 
