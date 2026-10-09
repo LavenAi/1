@@ -1,0 +1,29 @@
+# Laven AI
+
+A voice-first, personalized AI companion delivered as an online web app for mobile and desktop browsers.
+
+## Current status
+
+This repository contains product planning and an implementation handoff. Application development and deployment have not started. The initial release is a private trial for the owner and email-allowlisted invitees.
+
+## Project documents
+
+- [Project blueprint](outputs/blueprint.md): English product specification, behavior, folder structure, and decision history.
+- [Startup launch plan](outputs/startup-launch-plan.md): delivery milestones and real online release criteria.
+- [Build agent prompt](outputs/build-agent-prompt.md): instructions to give an AI implementation agent alongside the project documents.
+- [Production foundation brief](outputs/executor-brief-02-production-foundation.md): model/runtime feasibility and integration checklist.
+- [Earlier prototype brief](outputs/executor-brief-01.md): superseded historical planning; do not use as the current build assignment.
+
+Start with the blueprint and launch plan. Give the build agent the complete build prompt and source documents. Planning files include paths from the original Windows workspace; map them to your checkout before implementation. The planned application directory is `work/laven-ai/`.
+
+## Selected direction
+
+- Next.js and TypeScript for the responsive web application.
+- Supabase for authentication and account-scoped persistence.
+- Cloudflare for hosting and the verified deployment/runtime path.
+- OpenRouter for the cascaded transcription, conversation, and speech pipeline.
+- Thai/English conversation, a minimal lavender interface, and user-controlled personalization memory.
+
+Exact model availability, deployment compatibility, voice quality, latency, and operating costs still require verification. Historical estimates and selected model identifiers are not proof that live integrations work.
+
+Keep credentials, private user data, audio recordings, and local environment files out of the repository. The USD 10 monthly AI cap is a planning control, not funded provider credit or subscription pricing.

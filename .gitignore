@@ -1,0 +1,33 @@
+# Local secrets and environment files
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+
+# Dependencies, build products, caches, and test artifacts
+node_modules/
+.next/
+.open-next/
+.wrangler/
+.turbo/
+.cache/
+dist/
+build/
+coverage/
+playwright-report/
+test-results/
+*.tsbuildinfo
+*.log
+
+# Local Supabase state
+supabase/.temp/
+supabase/.branches/
+
+# OS files and local/private artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+.local/
+private-data/
