@@ -122,7 +122,7 @@ Suggested roles are D = developer, P = product/research, X = UX/conversation, Q 
 | T068 | Implement contextual expressive TTS direction using the saved per-reply personality baseline | D + X + Q | Unassigned | Unassigned | planned | - |
 | T069 | Resolve repository visibility against the earlier private-repository requirement and record the actual Git/GitHub state | D + P | Unassigned | Unassigned | blocked | Public repo vs Step 105 private plan; explicit owner direction pending |
 | T070 | Verify the first 2D import format/runtime, local package contract, commercial rights, device support, and resource limits | D + X | Unassigned | Unassigned | ready | Read-only evaluation ready; not dispatched |
-| T071 | Build the minimalist lavender ball and its conversation-state controller | D + X | Unassigned | Unassigned | planned | Eyes and shape-changing mouth confirmed Oct 10; styling/synchronization pending |
+| T071 | Build the minimalist lavender ball and its conversation-state controller | D + X | Unassigned | Unassigned | planned | Owner corrected Oct 10: eyes, NO MOUTH; non-mouth animation only |
 | T072 | Implement bounded client-local package import, validation, and account-partitioned storage | D | Unassigned | Unassigned | planned | R001; dependencies/decisions and implementation pending |
 | T073 | Render an authorized compatible rigged 2D model through an isolated runtime adapter | D | Unassigned | Unassigned | planned | R001; dependencies/decisions and implementation pending |
 | T074 | Connect ball and supported rig speaking motion to actual originating-surface playback | D + Q | Unassigned | Unassigned | planned | R001; dependencies/decisions and implementation pending |
@@ -192,4 +192,5 @@ For each assignment:
 | October 9, 2026 | R001 adds 13 avatar/floating tasks: total 82; T070/T078 ready for read-only evaluation, 11 additions planned | Default ball + first-release local rigged-2D import confirmed; format/OS/sequence pending; no code or purchase |
 | October 9, 2026 | Owner confirmed floating companion in the first release alongside web, default ball, and local rigged-2D import | T082 now required before T063 rollout; first OS targets pending; no implementation |
 | October 9, 2026 | Owner selected Windows as the first-release floating platform | T080/T082 required for Windows; T081 Android floating is future work; web mobile/desktop scope unchanged; runtime/version evidence pending |
-| October 10, 2026 | Owner confirmed eyes and a shape-changing mouth for the default ball | T071 appearance refined; mouth shape inventory and audio-energy versus phoneme/viseme alignment still pending; no animation implemented |
+| October 10, 2026 | Director initially interpreted the ball appearance as eyes and a shape-changing mouth | Superseded by the owner's explicit NO MOUTH correction below; no animation implemented |
+| October 10, 2026 | Owner explicitly corrected the default ball: eyes, NO MOUTH | T071/T074 and all active specs corrected; no ball mouth-shape/lip-sync requirement; imported rig support retained; no implementation |

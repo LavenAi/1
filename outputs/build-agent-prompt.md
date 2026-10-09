@@ -57,7 +57,7 @@ Interpretation rules:
 </task_selection_and_boundary>
 
 <creative_direction>
-Treat the interface as a quiet place to spend time with a companion. Lavender is the visual identity. The living lavender ball with eyes and a shape-changing mouth is the default focal point; a supported user-imported rigged 2D model can replace it. Typography, spacing, motion, captions, and controls should make speaking feel natural.
+Treat the interface as a quiet place to spend time with a companion. Lavender is the visual identity. The living lavender ball with eyes and no mouth is the default focal point; a supported user-imported rigged 2D model can replace it. Typography, spacing, motion, captions, and controls should make speaking feel natural.
 
 For a design/UI task, you have creative freedom over composition, design tokens, icon treatment, transitions, empty states, conversational microcopy, and implementation details within the blueprint. Compare two or three plausible visual treatments briefly, choose the strongest, and record the design decision. Do not turn this into another questionnaire or wait for a separate design-selection ceremony. Apply this direction only to the assigned work; a provider-research task does not require UI redesign.
 
@@ -83,7 +83,7 @@ Avatar and local assets:
 - Format remains unselected; Live2D Cubism is a proposal to evaluate first. Verify SDK release terms and compatible assets before adopting/installing a runtime. Do not add a 3D importer or automatic rigging.
 - Model contents and references remain local and account-partitioned. Never upload assets to cloud/provider/logging services or commit them. Proposed selection is device-local; other devices require their own import and keep a working gallery/ball fallback.
 - Validate package-local resources and bounded parser/texture/storage/GPU limits; reject executable/remote/unsafe references. Preview/use/replace/remove/failure/eviction/account-switch/deletion behavior requires actual checks.
-- The default ball has eyes and a shape-changing mouth. Exact shapes and audio-energy versus phoneme/viseme alignment are pending; do not silently claim accurate lip-sync or add a paid alignment service.
+- The default ball has eyes and NO MOUTH. Do not add mouth shapes, lip-sync, or a mouth-alignment task to the ball. Communicate speaking through restrained non-mouth motion. User-imported rig parameters remain a separate supported-asset concern.
 - Actual originating-surface playback drives speech motion; stale turn results cannot restart animation. Preserve transient-only audio and captions. No per-frame inference or generated-video provider.
 - T078-T082 retain cross-app floating delivery. First-release Windows inclusion is confirmed; supported Windows versions/runtime require evidence; an in-page widget does not satisfy overlay acceptance.
 

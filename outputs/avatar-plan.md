@@ -5,7 +5,7 @@ Status: Director planning. No renderer, importer, SDK, model purchase, native cl
 
 ## Confirmed Scope
 
-- First-release default: a simple minimalist lavender ball with eyes and a mouth capable of changing shapes, confirmed October 10, 2026. It responds to actual listening, thinking, and speaking.
+- First-release default: a simple minimalist lavender ball with eyes and NO MOUTH, explicitly corrected by the owner October 10, 2026. It responds to actual listening, thinking, and speaking without mouth shapes or lip-sync.
 - First-release alternative: users import their purchased, already rigged 2D anime model to replace the ball.
 - Model files stay locally on the importing user's device. No cloud upload, model-file sync, provider submission, sharing, or repository copy.
 - The same AI companion, account, personality, voice, history, and memory continue. Existing gallery choices remain available.
@@ -24,7 +24,7 @@ Decision sequence: the owner requested rigged anime and cross-app floating prese
 | Persistence | Device-local files | Propose account-partitioned browser storage; native clients need a separate local store |
 | Selection | Files do not sync | Propose device-local override and references; other devices retain their valid gallery/ball appearance until separately imported |
 | Limits | One main AI companion | Propose one active imported model per account/device; bytes/file counts/textures/runtime limits need evidence |
-| Motion | Ball has eyes and a shape-changing mouth; live conversational behavior | Exact mouth shapes and audio-energy versus phoneme/viseme alignment pending; supported mappings differ for imported rigs |
+| Motion | Default ball has eyes and no mouth; live conversational behavior | Eye styling and non-mouth motion remain design details; imported rigs have their own supported mappings |
 | Floating delivery | Windows floating in the first release is confirmed | T078 verifies supported Windows versions/runtime; T082 is required. Android floating and other desktop OS targets are later. |
 
 Proposals are not owner-confirmed details. No multi-runtime compatibility or free commercial SDK release is promised.
@@ -35,7 +35,7 @@ Settings > My Companion includes the ball, existing gallery, and local model imp
 
 Failed import preserves the previous working appearance. Removing a model deletes the app's local copy and releases its resources; it never deletes the user's original purchased files. Other devices/browser profiles/native clients require separate imports. Keep captions below the active companion and conversation controls usable.
 
-The ball can be built with a lightweight code/SVG/canvas approach; a 3D engine or commercial mascot is not mandatory. Eyes and a shape-changing mouth are owner-confirmed for the default ball. Exact eye styling, blink/expression behavior, shape inventory, and mouth synchronization method remain proposals/pending details. Do not assume phoneme-accurate lip-sync is selected or implemented.
+The ball can be built with a lightweight code/SVG/canvas approach; a 3D engine or commercial mascot is not mandatory. The default ball has eyes and no mouth. The owner's explicit NO MOUTH correction supersedes the Director's earlier mouth interpretation and lip-sync question. Exact eye styling, blink/expression behavior, and non-mouth motion remain design details. Use restrained body/light/eye motion to communicate states; do not draw mouth shapes or add lip-sync to the ball.
 
 ## Local Privacy, Validation, and Lifecycle
 
@@ -53,7 +53,7 @@ The ball can be built with a lightweight code/SVG/canvas approach; a 3D engine o
 
 Accepted local session/turn state feeds a controller with ball and selected-compatible-2D adapters. Proposed states: idle, listening, thinking, speaking, paused, error. Map supported blink/breath/motions/expressions explicitly; do not invent missing parameters.
 
-Actual originating-surface TTS playback drives speaking motion. Receiving shared chat text must not make another device appear to speak. Use turn IDs/stale-result rejection so pause/end/cancel stops obsolete mouth motion. Audio-energy mouth opening is a possible baseline for a compatible rig, not phoneme-accurate lip-sync or word-caption alignment.
+Actual originating-surface TTS playback drives speaking motion. The default ball uses non-mouth motion only. Receiving shared chat text must not make another device appear to speak. Use turn IDs/stale-result rejection so pause/end/cancel stops obsolete animation. For a user-imported compatible rig only, audio-energy mouth opening remains a possible supported mapping, not phoneme-accurate lip-sync or word-caption alignment. The default-ball correction does not remove features from user-owned model assets.
 
 Release frame loops, GPU resources, object URLs, and audio-analysis connections on replacement/unmount/context loss. Keep transient playback only; no per-frame AI calls, generated-video provider, new inference model, or camera capture. Lower motion/physics under reduced-motion or device constraints and record actual limitations.
 

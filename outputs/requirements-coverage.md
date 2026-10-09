@@ -225,7 +225,7 @@ Read the full matching Step in the blueprint and the corresponding backlog task 
 | Pending explicit-memory requests: duplicate/cancellation/save failure handling | T018, T044-T046, T067 | Specify request identity/lifetime and reject stale confirmation/writes; do not claim a pending save succeeded |
 | Initial private trial expected 1-5; no fixed deadline/price | T008, T063-T064 | Expected size is not a registration cap; commercial pricing and public launch remain undecided |
 | Extra languages, full tutor, Pingo-like future persona, official purchased mascot, 3D import | Backlog Later Work; R001 | Later work; first-release local 2D import remains selected |
-| R001: default ball and optional first-release local rigged-2D import | T070-T077; avatar-plan.md | Ball eyes and shape-changing mouth confirmed Oct 10; synchronization pending. Imported files local only; format/SDK/device evidence pending; no cloud file sync |
+| R001: default ball and optional first-release local rigged-2D import | T070-T077; avatar-plan.md | Owner corrected Oct 10: ball has eyes and NO MOUTH; no ball lip-sync. Imported files local only; supported rig mappings/format/SDK/device evidence pending; no cloud file sync |
 | R001: cross-app floating companion and hideable controls | T078-T082; avatar-plan.md | Confirmed in first release; Windows selected; runtime/version evidence pending; T082 required before rollout |
 | Team lives in Laos and is exploring global funding | T008; startup-launch-plan.md | No company jurisdiction, grant eligibility, investment, or funded allowance established |
 

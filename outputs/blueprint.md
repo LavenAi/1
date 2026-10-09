@@ -17,7 +17,7 @@ Define the product step by step with the owner before implementation.
 
 The owner's latest clarification takes precedence over historical circle-only/gallery-only appearance and blanket floating-client deferral. See [avatar-plan.md](avatar-plan.md) for the detailed contract.
 
-- First release: a simple minimalist lavender ball with eyes and a shape-changing mouth is the default living companion (face confirmed October 10, 2026); users may replace it with their own purchased, already rigged 2D anime model.
+- First release: a simple minimalist lavender ball with eyes and no mouth is the default living companion (explicit owner correction October 10, 2026); users may replace it with their own purchased, already rigged 2D anime model. Do not implement mouth shapes or lip-sync for the default ball.
 - First-release local import is confirmed. The earlier suggestion to defer every rigged model is superseded; purchasing/commissioning an official Laven anime character is optional future work.
 - Imported model files remain locally on the importing user's computer/device. No cloud upload, model-file synchronization, repository copy, or provider submission. Account settings/history/memory otherwise retain their existing sync.
 - The latest clarified type is rigged 2D. A 3D importer, automatic rigging, and arbitrary-format support are not selected.
@@ -85,7 +85,7 @@ These priorities guide a real startup product. The initial online release remain
 ### Confirmed Main Screen Direction
 
 - Use a voice-focused main conversation screen.
-- Place a minimalist lavender ball with eyes and a shape-changing mouth at the center as the default living companion (R001). Mouth shape inventory and audio-energy versus phoneme/viseme synchronization remain pending.
+- Place a minimalist lavender ball with eyes and no mouth at the center as the default living companion (R001). Use non-mouth motion for listening/thinking/speaking. The earlier mouth-shape question is superseded, not an unresolved requirement.
 - Animate actual local listening, thinking, and speaking states; a supported imported rigged 2D model can replace the ball in the first release.
 - Let users customize the image shown within the circle by selecting a ready-made image from the app's gallery.
 - Use the lavender ball as the default before a gallery or valid device-local model is selected.
