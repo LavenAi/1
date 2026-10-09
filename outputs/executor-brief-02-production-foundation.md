@@ -4,9 +4,11 @@ Status: Prepared by the Director. Not dispatched; Executor and reviewer are unas
 
 ## Outcome
 
-Establish a verified implementation path for a real online Laven AI MVP. The owner has confirmed a responsive production web app for mobile/desktop browsers, not a local-only demo or a native mobile release.
+Establish a verified implementation path for a real online Laven AI MVP. The owner has confirmed a responsive production web app for mobile/desktop browsers, not a local-only demo. R001 additionally records first-release ball/local 2D import and cross-app floating presence; native targets and rollout sequence remain pending.
 
 Keep Next.js/TypeScript, Supabase, Cloudflare, and the cascaded OpenRouter pipeline. Real user authentication, cloud persistence, protected AI integration, and actual voice are release requirements. Mocked tests may assist development; they cannot satisfy production acceptance.
+
+R001 is in avatar-plan.md. Treat format/license/platform checks as separate bounded T070/T078 assignments; this foundation brief does not authorize SDK purchases, native client implementation, or cloud upload of user model files.
 
 ## Inputs
 

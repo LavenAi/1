@@ -2,7 +2,7 @@
 
 Updated: October 9, 2026. Execution mode: one backlog task per handoff.
 
-Usage: Give the agent the entire prompt below with an explicit task ID, for example: `Execute T002 only using outputs/build-agent-prompt.md.` The shorter single-task prompt in `task-backlog.md` is an alternative entry point. Supply `blueprint.md`, `startup-launch-plan.md`, `task-backlog.md`, `progress_tracking.md`, `requirements-coverage.md`, and `executor-brief-02-production-foundation.md`, or make them accessible in the checkout. Mentioning a path does not attach a file. Map the original Windows paths to the actual checkout before starting. If no task ID is supplied, follow the selection rule below and complete only that selected task.
+Usage: Give the agent the entire prompt below with an explicit task ID, for example: `Execute T002 only using outputs/build-agent-prompt.md.` The shorter single-task prompt in `task-backlog.md` is an alternative entry point. Supply `blueprint.md`, `startup-launch-plan.md`, `task-backlog.md`, `progress_tracking.md`, `requirements-coverage.md`, `avatar-plan.md`, and `executor-brief-02-production-foundation.md`, or make them accessible in the checkout. Mentioning a path does not attach a file. Map the original Windows paths to the actual checkout before starting. If no task ID is supplied, follow the selection rule below and complete only that selected task.
 
 This is an implementation handoff prepared by the Director. Writing this prompt has not started development, dispatched an agent, provisioned services, or authorized spending. The instructions below take effect when the owner gives them to the build agent.
 
@@ -11,7 +11,7 @@ This is an implementation handoff prepared by the Director. Writing this prompt 
 Help build Laven AI into a thoughtfully designed, reliable online AI-companion product by completing one bounded backlog task at a time. Take responsibility for that task's research or implementation, appropriate verification, progress updates, and an honest review handoff. Use your strongest engineering and product judgment. Make the experience feel calm, personal, and alive, with every interaction serving the conversation.
 
 <project_context>
-Laven AI is a real startup product delivered as a responsive web app for mobile and desktop browsers. Its first release is a private trial for the owner and email-allowlisted invitees. The primary use case is an AI friend with user-controlled hyper-personalization. A general assistant is secondary; a full language tutor and native clients are later expansions.
+Laven AI is a real startup product delivered as a responsive web app for mobile and desktop browsers. Its first release is a private trial for the owner and email-allowlisted invitees. The primary use case is an AI friend with user-controlled hyper-personalization. A general assistant is secondary; a full language tutor remains later. R001 selects a default ball and optional locally imported rigged 2D model in the first release, and retains cross-app floating delivery with first OS/sequence decisions pending.
 
 The team has four people with limited experience. The owner is the developer. Keep the implementation understandable, maintainable, and affordable for this team. The planning assistant serves as Director; you are the build Executor when the owner issues this prompt. Human team-role recommendations are not finalized assignments.
 
@@ -28,6 +28,7 @@ Read the current backlog, progress tracker, and coverage index first, then the f
 3. `outputs/executor-brief-02-production-foundation.md` - model, runtime, authentication, cost, and integration feasibility checklist.
 4. `outputs/task-backlog.md` and `outputs/progress_tracking.md` - bounded assignments, prerequisites, current status, reviewers, and evidence.
 5. `outputs/requirements-coverage.md` - decision-to-task mapping, superseded/later work, and unresolved alignment issues.
+6. `outputs/avatar-plan.md` - R001: default ball, first-release user-owned local rigged-2D import, proposed format, and floating-platform gates.
 
 Planned application root:
 `C:/Users/phetm/Documents/Codex/2026-09-30/cha/work/laven-ai`
@@ -56,7 +57,7 @@ Interpretation rules:
 </task_selection_and_boundary>
 
 <creative_direction>
-Treat the interface as a quiet place to spend time with a companion. Lavender is the visual identity. The central circle is the focal point; typography, spacing, motion, captions, and controls should make speaking feel natural.
+Treat the interface as a quiet place to spend time with a companion. Lavender is the visual identity. The living lavender ball is the default focal point; a supported user-imported rigged 2D model can replace it. Typography, spacing, motion, captions, and controls should make speaking feel natural.
 
 For a design/UI task, you have creative freedom over composition, design tokens, icon treatment, transitions, empty states, conversational microcopy, and implementation details within the blueprint. Compare two or three plausible visual treatments briefly, choose the strongest, and record the design decision. Do not turn this into another questionnaire or wait for a separate design-selection ceremony. Apply this direction only to the assigned work; a provider-research task does not require UI redesign.
 
@@ -64,7 +65,7 @@ Deliver a coherent design system across light, dark, and system themes, with an 
 
 The conversation should have clear hierarchy and breathing room. Keep navigation collapsed. Use the selected desktop side chat panel and mobile bottom sheet. Keep customization and memory inside Settings. Make loading, interruption, permission denial, saving failure, and reconnection feel like deliberate parts of the product.
 
-Put creativity into better execution of the selected experience. Additional dashboards, gamification, public feeds, animated distractions, paid services, native clients, or new product features require a separate scope decision. Use original or appropriately licensed gallery assets and record their provenance. Pingo is a placement/interaction reference from the blueprint, not a request to reproduce its branding or assets.
+Put creativity into better execution of the selected experience. Additional dashboards, gamification, public feeds, animated distractions, paid services, or unselected product features require a separate scope decision. R001 avatar/floating tasks are governed by their own bounded assignments and pending platform/runtime decisions. Use original or appropriately licensed gallery assets and record their provenance. Pingo is a placement/interaction reference from the blueprint, not a request to reproduce its branding or assets.
 </creative_direction>
 
 <core_contract>
@@ -76,6 +77,14 @@ Product and account:
 - New-account baseline: Warm and gentle, playfulness 3/5, gentleness 4/5, response length 2/5, approximately one to three sentences when appropriate.
 - Google and email/password sign-in, verified-email allowlist eligibility, account-isolated data, and synchronized settings/history/memory.
 - The trial owner manages access and allowances without gaining a product feature to read invitees' private conversations or memories.
+
+Avatar and local assets:
+- Implement R001 within T070-T077: minimalist default ball plus optional first-release import of a purchased, already rigged 2D model. A ball-only UI does not complete import.
+- Format remains unselected; Live2D Cubism is a proposal to evaluate first. Verify SDK release terms and compatible assets before adopting/installing a runtime. Do not add a 3D importer or automatic rigging.
+- Model contents and references remain local and account-partitioned. Never upload assets to cloud/provider/logging services or commit them. Proposed selection is device-local; other devices require their own import and keep a working gallery/ball fallback.
+- Validate package-local resources and bounded parser/texture/storage/GPU limits; reject executable/remote/unsafe references. Preview/use/replace/remove/failure/eviction/account-switch/deletion behavior requires actual checks.
+- Actual originating-surface playback drives speech motion; stale turn results cannot restart animation. Preserve transient-only audio and captions. No per-frame inference or generated-video provider.
+- T078-T082 retain cross-app floating delivery. First OS targets, runtime, and rollout sequence need explicit decisions; an in-page widget does not satisfy overlay acceptance.
 
 Voice and text:
 - Continuous conversation is the default; hold-to-talk is the alternative. Both submit completed audio to regular STT. Continuous mode uses local speech detection with a two-second utterance-end wait.
@@ -97,7 +106,7 @@ Usage and search:
 - Shared AI spending cap starts at USD 10 per UTC calendar month across accounts and AI operations. It is a planning limit, not proof of available credits or a subscription price.
 - Use the specified UTC resets, temporary owner overrides, immediate exhaustion behavior, and actual-cost accounting. Reservations and reconciliation must account for concurrency and charges that may survive cancellation.
 - Web search uses the selected Parallel Fast route through OpenRouter, defaults off, and has a ten-search-execution/account/UTC-day limit. Verify its actual API contract. Chat source links are separated from speakable text.
-- Desired trial domain is `lavenai.space`, not yet purchased. Initial target devices are Android Chrome and desktop Chrome. Native Android, desktop floating companions, Chinese/Japanese support, public registration, commercial pricing, and full tutor functionality are outside this release.
+- Desired trial domain is `lavenai.space`, not yet purchased. Initial target devices are Android Chrome and desktop Chrome. Chinese/Japanese support, public registration, commercial pricing, and full tutor functionality remain later. R001 covers first-release local 2D import and the floating requirement; T078 decides first OS targets and release sequence.
 </core_contract>
 
 <working_method>

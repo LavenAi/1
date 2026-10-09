@@ -8,9 +8,9 @@ This is the authoritative task-status and evidence tracker. Scope/dependencies/a
 
 | Measure | Current value |
 | --- | --- |
-| Total tracked tasks | 69 |
-| Planned | 59 |
-| Ready to assign | 8 |
+| Total tracked tasks | 82 |
+| Planned | 70 |
+| Ready to assign | 10 |
 | In progress | 0 |
 | In review | 1 |
 | Done with acceptance evidence | 0 |
@@ -73,7 +73,7 @@ Suggested roles are D = developer, P = product/research, X = UX/conversation, Q 
 | T019 | Implement daily active-session usage ledger and admission check, including overlapping sessions and typed playback outside sessions | D | Unassigned | Unassigned | planned | - |
 | T020 | Implement monthly AI-spend reservation/reconciliation and provider-usage records | D | Unassigned | Unassigned | planned | - |
 | T021 | Build reusable protected provider-call admission and error handling around eligibility, daily rules, monthly budget, and turn identity | D | Unassigned | Unassigned | planned | - |
-| T022 | Build the responsive app shell and Conversation screen with circle, collapsed menu, and desktop/mobile chat containers | D + X | Unassigned | Unassigned | planned | - |
+| T022 | Build the responsive app shell and Conversation screen with avatar container, collapsed menu, and desktop/mobile chat containers | D + X | Unassigned | Unassigned | planned | R001 ball/import container |
 | T023 | Build readable user/AI messages and typed Send flow with source/speech metadata separation | D + X | Unassigned | Unassigned | planned | - |
 | T024 | Implement transient microphone capture and hold/release input with permission, empty/cancelled recording, and 120-second limit handling | D | Unassigned | Unassigned | planned | - |
 | T025 | Implement the verified STT adapter and account-scoped transcript acceptance | D | Unassigned | Unassigned | planned | - |
@@ -91,7 +91,7 @@ Suggested roles are D = developer, P = product/research, X = UX/conversation, Q 
 | T037 | Synchronize saved settings and edits across surfaces with stale-write/conflict handling | D | Unassigned | Unassigned | planned | - |
 | T038 | Implement light/dark/system theme, lavender/accent selection, Thai/English UI strings, and caption/startup/search preference controls | D + X | Unassigned | Unassigned | planned | - |
 | T039 | Implement My Companion personality/name/custom-instruction controls with autosave and confirmed Reset personality | D + X | Unassigned | Unassigned | planned | - |
-| T040 | Prepare a small licensed/original gallery and integrate synced circle image selection | X + D | Unassigned | Unassigned | planned | - |
+| T040 | Prepare a small licensed/original gallery and integrate synced gallery appearance selection | X + D | Unassigned | Unassigned | planned | Local rig import separately in T072/T075 |
 | T041 | Implement verified voice catalog, preview, speed selection, and next-reply settings semantics | D + X | Unassigned | Unassigned | planned | - |
 | T042 | Implement final reply prompt/style/language assembly and saved-settings precedence | D + X | Unassigned | Unassigned | planned | - |
 | T043 | Implement History list/read/resume, activity ordering, topic/date titles, and protected manual renaming | D + X | Unassigned | Unassigned | planned | - |
@@ -121,6 +121,19 @@ Suggested roles are D = developer, P = product/research, X = UX/conversation, Q 
 | T067 | Implement conversational explicit-remember requests and their item-specific persistence/confirmation flow | D + Q | Unassigned | Unassigned | planned | - |
 | T068 | Implement contextual expressive TTS direction using the saved per-reply personality baseline | D + X + Q | Unassigned | Unassigned | planned | - |
 | T069 | Resolve repository visibility against the earlier private-repository requirement and record the actual Git/GitHub state | D + P | Unassigned | Unassigned | blocked | Public repo vs Step 105 private plan; explicit owner direction pending |
+| T070 | Verify the first 2D import format/runtime, local package contract, commercial rights, device support, and resource limits | D + X | Unassigned | Unassigned | ready | Read-only evaluation ready; not dispatched |
+| T071 | Build the minimalist lavender ball and its conversation-state controller | D + X | Unassigned | Unassigned | planned | R001; dependencies/decisions and implementation pending |
+| T072 | Implement bounded client-local package import, validation, and account-partitioned storage | D | Unassigned | Unassigned | planned | R001; dependencies/decisions and implementation pending |
+| T073 | Render an authorized compatible rigged 2D model through an isolated runtime adapter | D | Unassigned | Unassigned | planned | R001; dependencies/decisions and implementation pending |
+| T074 | Connect ball and supported rig speaking motion to actual originating-surface playback | D + Q | Unassigned | Unassigned | planned | R001; dependencies/decisions and implementation pending |
+| T075 | Add local model import/preview/use/replace/remove/default controls and identity/deletion cleanup | D + X | Unassigned | Unassigned | planned | R001; dependencies/decisions and implementation pending |
+| T076 | Verify local import privacy, hostile-package limits, persistence, accessibility, and real-device performance | D + Q + X | Unassigned | Unassigned | planned | R001; dependencies/decisions and implementation pending |
+| T077 | Review first-release ball and optional local rigged-2D import acceptance | D + Q + P | Unassigned | Unassigned | planned | R001; dependencies/decisions and implementation pending |
+| T078 | Evaluate cross-app floating platforms, supported OS matrix, costs, and web/floating release sequence | D + P | Unassigned | Unassigned | ready | Read-only evaluation ready; not dispatched |
+| T079 | Define and implement the approved floating client/session bridge and local asset boundaries | D | Unassigned | Unassigned | planned | R001; dependencies/decisions and implementation pending |
+| T080 | Build the floating desktop companion for the explicitly selected desktop OS and runtime | D + X | Unassigned | Unassigned | planned | R001; dependencies/decisions and implementation pending |
+| T081 | Build the floating Android companion if Android is selected for the first floating milestone | D | Unassigned | Unassigned | planned | R001; dependencies/decisions and implementation pending |
+| T082 | Review packaging, permissions, recovery, resource use, and release evidence for selected floating targets | D + Q + P | Unassigned | Unassigned | planned | R001; dependencies/decisions and implementation pending |
 
 ## Release Gates
 
@@ -129,7 +142,8 @@ Suggested roles are D = developer, P = product/research, X = UX/conversation, Q 
 | A - Feasibility | T002-T008: current official model/runtime/auth/email evidence, cost/setup dependencies, material mismatch decisions | Not passed; research not executed |
 | B - Real protected voice | T014-T021 and T028-T029: eligible real account, real Thai/English voice pipeline, measured usage/timing, protected staging | Not passed; setup/funding/live evidence missing |
 | C - Personalization safety | Memory off/forward-only, explicit remember, deleted-fact exclusions, source expiry/delete guards, concurrent account/session checks | Not passed; implementation/tests pending |
-| D - Online private trial | Full selected requirement coverage, accurate final captions, device/quality/latency evidence, auth/email/domain/jobs/runbook, reviewed rollout | Not ready; no real deployed product |
+| D - Online private trial | Full selected coverage including T077 avatars and T078 sequence decision; final captions/device/voice evidence; auth/domain/jobs/runbook; T082 if floating included in rollout | Not ready; no deployed product or avatar implementation |
+| E - Floating targets | T078-T082: owner-selected OS/sequence, actual cross-app clients, permissions, controls, local assets, session/quota guards, packaging/recovery | Not passed; platform/sequence selection and client evidence pending |
 
 Targets that fail measurement remain explicit issues. Sentence captions do not meet the final word-progress requirement, and the three-second target must include the two-second speech-end wait. A material scope/target change needs a recorded owner decision rather than a hidden exception.
 
@@ -143,6 +157,8 @@ Targets that fail measurement remain explicit issues. Sentence captions do not m
 | B04 | Desired domain unpurchased; trial deployment/email/device access still needed | T029, T061-T063 | Prepare real setup/deployment instructions, then the authorized domain/email/device configuration |
 | B05 | GitHub repo `LavenAi/1` is public; Step 105 planned private storage | T069, T063 | Record owner's explicit public/private direction; do not change visibility automatically |
 | B06 | Accurate Thai word/audio alignment, expressive quality, speed controls, and latency need actual evidence | T004, T028, T041, T059, T061, T068 | Verify capabilities, implement playback-aligned path, measure on target devices; prepare an approved alternative if necessary |
+| B07 | Local rigged-2D format/version, SDK commercial terms, package limits, and model-device evidence pending | T070-T077, T063 | Evaluate Live2D first as a proposal; owner selection and rights/device checks before integration |
+| B08 | First floating OS targets and web/floating rollout sequence undecided | T078-T082, T063 | Produce platform/cost matrix and obtain an explicit scope/sequence decision |
 
 B01-B04/B06 are known validation/setup conditions, not claims that a provider is unavailable or a task has failed. T069 is blocked by the specific unresolved visibility alignment. User messages and stored records must not be exposed through troubleshooting evidence.
 
@@ -173,3 +189,4 @@ For each assignment:
 | --- | --- | --- |
 | October 9, 2026 | Director created the 69-task breakdown, corrected source references, added five explicit coverage tasks, and mapped all 182 discovery decisions | task-backlog.md; requirements-coverage.md; mapping is not implementation verification |
 | October 9, 2026 | Initial tracker established; T001 in review, eight research/design tasks ready, T069 blocked, all other tasks planned | No application task dispatched; no live API/device/deployment evidence |
+| October 9, 2026 | R001 adds 13 avatar/floating tasks: total 82; T070/T078 ready for read-only evaluation, 11 additions planned | Default ball + first-release local rigged-2D import confirmed; format/OS/sequence pending; no code or purchase |

@@ -1,11 +1,11 @@
 # Laven AI - Small-Task Implementation Backlog
 
 Prepared: October 9, 2026.
-Status: Director planning. There are 69 tracked tasks. The requirements-mapping audit is prepared for review; no application implementation task has been dispatched or completed. No application code, service setup, paid tests, or deployment has been performed through this breakdown. Current task states are recorded in `progress_tracking.md`.
+Status: Director planning. There are 82 tracked tasks. The requirements-mapping audit is prepared for review; no application implementation task has been dispatched or completed. No application code, service setup, paid tests, or deployment has been performed through this breakdown. Current task states are recorded in `progress_tracking.md`.
 
 ## How to Use This Backlog
 
-Use this alongside `blueprint.md`, `startup-launch-plan.md`, and `build-agent-prompt.md`. The blueprint remains the product specification; this file divides its delivery into reviewable assignments without changing selected behavior. Later confirmed decisions take precedence over earlier historical ones. Proposed defaults remain adjustable within the selected scope. `requirements-coverage.md` maps all 182 numbered discovery decisions and later project instructions to tasks; `progress_tracking.md` is the single authoritative task-status tracker.
+Use this alongside `blueprint.md`, `avatar-plan.md`, `startup-launch-plan.md`, and `build-agent-prompt.md`. The blueprint remains the product specification; this file divides its delivery into reviewable assignments without changing selected behavior. Later confirmed decisions take precedence over earlier historical ones. Proposed defaults remain adjustable within the selected scope. `requirements-coverage.md` maps all 182 numbered discovery decisions and later project instructions to tasks; `progress_tracking.md` is the single authoritative task-status tracker.
 
 Give an implementation agent one task ID at a time. Read dependencies before starting. A dependency means the required contract/evidence must exist, not that every future feature of that component must be finished. Passing a small task does not mean the product is ready to launch. The phases describe work groups; independent tasks can overlap.
 
@@ -80,7 +80,7 @@ Start with a held recording to isolate the real pipeline; continuous capture fol
 
 | ID | Task and output | Depends on | Role | Acceptance evidence | Blueprint source |
 | --- | --- | --- | --- | --- | --- |
-| T022 | Build the responsive app shell and Conversation screen with circle, collapsed menu, and desktop/mobile chat containers | T010 + T012 | D + X | Actual mobile/desktop rendered inspection; navigation/focus/accessibility states work; visual animation is not represented as live AI | Main Screen; Page Map |
+| T022 | Build the responsive app shell and Conversation screen with avatar container, collapsed menu, and desktop/mobile chat containers | T010 + T012 | D + X | Actual mobile/desktop rendered inspection; ball/import states follow R001; navigation/focus/accessibility work; visual animation is not represented as live AI | Main Screen; Page Map; R001 |
 | T023 | Build readable user/AI messages and typed Send flow with source/speech metadata separation | T018 + T021 + T022 | D + X | Typed send creates one account-scoped turn; typing alone has no interrupt effect; corrections use a new typed message, without editing/regenerating old messages; citations excluded from speakable text; fake responses confined to tests | Steps 14, 24, 27, 65, 125 |
 | T024 | Implement transient microphone capture and hold/release input with permission, empty/cancelled recording, and 120-second limit handling | T018 + T022 | D | Touch/pointer/keyboard held recording; release submission; cancelled/empty capture discarded; limit offers Send/Record again; no saved audio | Steps 64, 179; User Speech Storage |
 | T025 | Implement the verified STT adapter and account-scoped transcript acceptance | T002 + T018 + T021 + T024 | D | Contract/error tests; live transcription marked pending until S2; cancelled/obsolete transcript cannot create a user message | Models; Steps 35, 143-145 |
@@ -110,7 +110,7 @@ Gate B: A real account-isolated voice turn has been observed and measured. A loc
 | --- | --- | --- | --- | --- | --- |
 | T038 | Implement light/dark/system theme, lavender/accent selection, Thai/English UI strings, and caption/startup/search preference controls | T010 + T017 + T022 + T037 | D + X | Device-language fallback and saved preference tested; keyboard/focus/contrast/reduced-motion checked; unavailable integrations not claimed live | Steps 11, 23, 59, 92-93, 147, 167 |
 | T039 | Implement My Companion personality/name/custom-instruction controls with autosave and confirmed Reset personality | T017 + T022 + T037-T038 | D + X | Four presets, 1-5 traits, 3/4/2 defaults, 1,000-character counter; preset changes retain traits; failed draft retained; reset preserves unrelated fields | Steps 69-71, 156-160, 172, 174 |
-| T040 | Prepare a small licensed/original gallery and integrate synced circle image selection | T010 + T017 + T022 + T037 | X + D | Both selected asset themes represented; default circle works; provenance recorded; image/animation fit verified on mobile/desktop; no upload UI | Steps 12-13, 115; proposed gallery default |
+| T040 | Prepare a small licensed/original gallery and integrate synced gallery appearance selection | T010 + T017 + T022 + T037 | X + D | Both asset themes and default ball work; provenance and mobile/desktop fit checked; R001 local rig import is covered by T072/T075 without general image upload | Steps 12-13, 115; R001 |
 | T041 | Implement verified voice catalog, preview, speed selection, and next-reply settings semantics | T004 + T017 + T027 + T031-T033 + T037-T039 | D + X | Sample uses saved personality/UI language; local work cancelled and quota paused before preview; explicit Resume; no daily deduction but monthly charge; current speech keeps old voice/speed | Steps 16-17, 150-152, 157, 161-162, 171 |
 | T042 | Implement final reply prompt/style/language assembly and saved-settings precedence | T026 + T038-T039 | D + X | Thai/English/mixed and explicit language requests exercised; custom instructions override conflicting style but not server policy; contextual adaptation does not edit saved traits | Steps 6, 29, 112, 116-117, 154, 156-160 |
 
@@ -148,9 +148,9 @@ Gate C: Memory-off, deleted-fact, history deletion/expiry, and concurrent-sessio
 | --- | --- | --- | --- | --- | --- |
 | T059 | Implement and verify the final word-progress caption path and Show AI captions behavior | T004 + T027 + T031 + T038 + T041 | D + X + Q | Actual playback-aligned whole words, Thai segmentation, wrapping, sentence clearing, and interrupted final clearing; prototype fallback explicitly not release-ready; missing timing capability becomes a reported blocker | Steps 10, 67-68, 167, 182; Caption Review |
 | T060 | Audit end-to-end access, retention, daily/monthly exhaustion, and concurrency with targeted regression cases | T034-T037 + T045-T050 + T053-T059 + T066-T068 | D + Q | Account isolation, revocation, deletion, stale jobs, overlapping time, and in-flight exhaustion tested across endpoints; preview/background exceptions respected; remaining failed checks visible | Release Acceptance; Steps 142-152 |
-| T061 | Run the Android Chrome/desktop Chrome voice and visual acceptance matrix; measure actual latency, quality, speed, and authorized costs | T029 + T030-T042 + T051 + T053-T060; S1-S3 | Q + D + X | Real-device observations, permissions/background/reconnect/echo behavior, both themes/languages; first-audible metric includes two-second silence wait; no audio retained; unmet targets reported | Device Priorities; Steps 78, 99-100, 108-109, 119-120, 161 |
+| T061 | Run the Android Chrome/desktop Chrome voice and visual acceptance matrix; measure actual latency, quality, speed, and authorized costs | T029 + T030-T042 + T051 + T053-T060 + T074-T075; S1-S3 | Q + D + X | Real-device observations, ball/import presentation, permissions/background/reconnect/echo, both themes/languages; first-audible metric includes two-second silence wait; no audio retained; unmet targets reported | Device Priorities; Steps 78, 99-100, 108-109, 119-120, 161; R001 |
 | T062 | Complete trial-domain/email/deployment/recovery operations and environment handoff | T007-T008 + T029 + T060-T061; S1 + S3 | D + Q | Actual authorized domain/DNS/email configured; migrations/jobs/secrets and owner bootstrap reproducible; rollback/recovery exercised; provider-retention uncertainty disclosed | Startup Milestone 4; Steps 102-103 |
-| T063 | Review private-trial readiness, resolve release blockers, and perform the authorized owner/invitee rollout | T001 + T059-T062 + T069; explicit rollout authorization | P + Q + D | Director/team review of full requirement coverage and live evidence; expected first trial is 1-5 including owner, not a hard signup cap; actual users reach working online product; partial completion not labeled launch-ready | Startup Milestone 4; Release Acceptance |
+| T063 | Review private-trial readiness, resolve release blockers, and perform the authorized owner/invitee rollout | T001 + T059-T062 + T069 + T077-T078; T082 if floating in rollout; explicit rollout authorization | P + Q + D | Review full coverage/live evidence and R001 avatars/sequence; expected 1-5 is not a signup cap; real users reach the online product; web-first approval does not complete floating delivery | Startup Milestone 4; Release Acceptance; R001 |
 | T064 | Collect manual trial feedback and measured usage, then prepare the wider-launch recommendation | T063 | P + Q + D | Reliability/retention/value findings, incurred cost vs estimates, remaining work, and pricing/public-launch questions documented; no automatic public registration or paid launch | Startup Milestone 5; Step 180 |
 
 Gate D: A real online private trial is only accepted when the startup release criteria and all selected requirements pass, or the owner explicitly approves a documented scope/target change. The prototype caption allowance is not a blanket release exception. T064 is a post-trial decision task, not permission for a public paid launch.
@@ -168,6 +168,41 @@ These tasks make obligations found in the detailed source review explicit. IDs a
 | T069 | Resolve repository visibility against the earlier private-repository requirement and record the actual Git/GitHub state | GitHub metadata available; owner decision for a visibility change | D + P | Current `LavenAi/1` is public, verified October 9; Step 105 planned private. Record the owner's explicit direction before changing visibility; working repo/remote/history preserved; no unsupported claim of private storage | Steps 105-106; later supplied repository/push instruction |
 
 Coverage review found all 182 discovery decisions mappable to this backlog, historical context, or explicitly later work. Mapping coverage is not implementation completion. Repository visibility is a recorded unresolved alignment issue; exact model/runtime capabilities and live quality remain unverified. `requirements-coverage.md` records the classifications and specific task links.
+
+## Revision R001 - Ball, Local 2D Import, and Floating Delivery
+
+First-release avatars now require a default minimalist ball and optional device-local imported user-owned rigged 2D model. No official purchased mascot or 3D importer is required. Format is pending; Live2D Cubism is the Director's first evaluation candidate. See avatar-plan.md for local/privacy/runtime contracts.
+
+Apply these acceptance amendments to existing tasks without deleting their original scope:
+
+- T010/T022: design/build the ball-or-imported-model container and local import/error/fallback flows; no fake working-model claims.
+- T017/T037: preserve cloud settings/history/memory sync while keeping imported assets and proposed custom-model selection device-local/account-partitioned.
+- T040: keep the licensed static gallery. R001 adds local rigged-2D import through T072/T075; no general image/3D upload scope.
+- T058/T060: include reachable app-local model cleanup, account-switch isolation, and no false promise to erase original files or offline devices immediately.
+- T061: include T074/T075 integration in the device evidence; T076 supplies import-specific privacy/performance checks.
+- T063: additionally requires T077 and an explicit T078 platform/sequence decision. If the owner selects a web-first trial, document that boundary and keep floating acceptance open. If floating clients are included in that rollout, require T082 for those targets.
+- T065: recommend actual existing gallery/preset/voice choices only; never invent available local models or silently import assets.
+
+### Added Tasks
+
+| ID | Task and output | Depends on | Role | Acceptance evidence | Blueprint source |
+| --- | --- | --- | --- | --- | --- |
+| T070 | Verify the first 2D import format/runtime, local package contract, commercial rights, device support, and resource limits | None | D + X | Official evidence/date; Live2D is a proposal, not selected; owner format decision and SDK/asset terms explicit; no purchase or installation | R001; avatar-plan.md |
+| T071 | Build the minimalist lavender ball and its conversation-state controller | T010 + T012 + T018 + T022 | D + X | Actual local listening/thinking/playback states; paused/error/reduced-motion behavior; no mock AI claim; default usable without a purchased rig | R001; avatar-plan.md |
+| T072 | Implement bounded client-local package import, validation, and account-partitioned storage | T070 + T012 + T016 | D | Chosen format only; package-local references; unsafe/remote/executable/oversized assets rejected; no cloud/network content transfer; quota/eviction/import-cancel handling | R001; local model privacy |
+| T073 | Render an authorized compatible rigged 2D model through an isolated runtime adapter | T070 + T072 + T018 + T022 | D | Real model/textures/mapped motions observed; load/error/context-loss/cleanup; missing rig features reported; SDK rights established; no static substitute | R001; runtime evidence |
+| T074 | Connect ball and supported rig speaking motion to actual originating-surface playback | T027 + T031 + T071 + T073 | D + Q | Pause/end/cancel/late-result guards; remote text does not animate speech; supported mouth mapping and bounded expressions; no per-frame inference or stored audio | R001; original voice/caption contract |
+| T075 | Add local model import/preview/use/replace/remove/default controls and identity/deletion cleanup | T017 + T022 + T037 + T040 + T072 + T073 | D + X | Failed import preserves appearance; local override isolated by account/device; other devices use valid fallback; deletion removes app-local copy when reachable, not original OS files; no cloud sync | R001; My Companion |
+| T076 | Verify local import privacy, hostile-package limits, persistence, accessibility, and real-device performance | T029 + T058 + T060 + T074 + T075; target devices | D + Q + X | Network inspection proves assets stay local; real authorized packages; account switch/removal/eviction; GPU/memory/reduced-motion and mobile/desktop matrix; no fabricated universal support | R001; device/privacy acceptance |
+| T077 | Review first-release ball and optional local rigged-2D import acceptance | T061 + T071-T076 | D + Q + P | Actual ball and local rig working with live conversation on approved devices; format/SDK rights and unresolved limits recorded; owner acceptance required for scope changes | R001; first-release avatar gate |
+| T078 | Evaluate cross-app floating platforms, supported OS matrix, costs, and web/floating release sequence | None | D + P | Official desktop/Android/iOS/PiP evidence; owner chooses first OS targets and sequence; in-page fallback not called cross-app; no framework/purchase silently selected | R001; confirmed floating presence |
+| T079 | Define and implement the approved floating client/session bridge and local asset boundaries | T018 + T021 + T036 + T037 + T078 | D | Reuse account guards/memory/budgets/origin-only audio; same-session view has one capture/timer; independent sessions still sum; local assets not auto-transferred; revoke/stop propagation | R001; cross-client contract |
+| T080 | Build the floating desktop companion for the explicitly selected desktop OS and runtime | T070-T075 + T078 + T079; approved desktop target | D + X | Real always-on-top/transparent placement where supported; drag/hide/reveal/pause/exit; ball/imported rig; OS permission/lifecycle tests; no unselected platform claim | R001; desktop floating delivery |
+| T081 | Build the floating Android companion if Android is selected for the first floating milestone | T070-T075 + T078 + T079; approved Android target | D | Actual overlay permission and touch behavior; microphone/service/notification lifecycle; pause/exit/revoke and local asset import; real OS/device evidence; no unrestricted-background promise | R001; Android floating delivery |
+| T082 | Review packaging, permissions, recovery, resource use, and release evidence for selected floating targets | T079 + owner-selected T080/T081; authorized release environment | D + Q + P | Selected OS matrix passes; captions/controls/local imports/account guards and quota cancellation verified; sequence explicit; unselected platforms not declared complete; rollout separately authorized | R001; floating acceptance |
+
+Gate E: selected floating targets require real cross-app client evidence from T082. A web trial alone does not complete floating delivery. First-release avatars require T077 even when the owner approves a web-first sequence. These additions are planning, not assignments, purchases, installations, or accepted implementation.
+
 
 ## First Work Queue
 
@@ -189,7 +224,7 @@ Replace the task ID and role/reviewer fields before sending. If using a separate
 You are the Executor for one bounded Laven AI task: [Txxx - task title].
 
 Read outputs/task-backlog.md, outputs/blueprint.md, outputs/startup-launch-plan.md,
-outputs/progress_tracking.md, outputs/requirements-coverage.md, and the relevant
+outputs/progress_tracking.md, outputs/requirements-coverage.md, outputs/avatar-plan.md, and the relevant
 guidance in outputs/build-agent-prompt.md. Read the source
 sections and latest decision outcomes referenced by this task. Preserve selected
 behavior, existing code, repository instructions, and budget/access boundaries.
@@ -228,4 +263,4 @@ Begin with a short plan, then do the scoped work in the same turn.
 
 ## Later Work - Outside This Trial Backlog
 
-Full language-tutor flows, Chinese/Japanese, native Android/iOS apps, the desktop floating companion, public signup, paid subscriptions, and scaling decisions remain later product work. Optional interview questions about language interests do not activate the tutor release. No new analytics/embedding/feedback service is selected by this breakdown.
+Full language-tutor flows, Chinese/Japanese, public signup, paid subscriptions, an official commissioned/purchased Laven character, 3D import, and scaling decisions remain later work. R001 selects first-release local rigged-2D import and separately retains floating delivery; its first OS targets and rollout sequence need T078. Do not classify every native/floating task as later by default. Optional interview questions about language interests do not activate the tutor release. No new analytics/embedding/feedback service is selected by this breakdown.

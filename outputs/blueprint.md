@@ -9,9 +9,23 @@ Desired domain: lavenai.space. Not yet purchased; availability, registration pri
 
 ## 1. Project Goal
 
-Build Laven AI as an actual startup product: an online conversational AI companion with real user accounts, cloud-persisted data, and live AI/voice integration. The owner has reconfirmed an online production web app accessed through mobile and desktop browsers. Retain Next.js/TypeScript, Supabase, Cloudflare, and the cascaded OpenRouter architecture. A local prototype or simulated browser demo is a development aid, not the final product or launch deliverable. Native Android/Play Store delivery is not selected for this release.
+Build Laven AI as an actual startup product: an online conversational AI companion with real user accounts, cloud-persisted data, and live AI/voice integration. The owner has reconfirmed an online production web app accessed through mobile and desktop browsers. Retain Next.js/TypeScript, Supabase, Cloudflare, and the cascaded OpenRouter architecture. A local prototype or simulated browser demo is a development aid, not the final product or launch deliverable. The web app remains the base platform; R001 records the floating-companion requirement and pending OS/release sequencing.
 Position the product as a Hyper-Personalization App, with an AI companion as its primary use case. Personalization is a core product capability.
 Define the product step by step with the owner before implementation.
+
+### Current Avatar Revision R001 - October 9, 2026
+
+The owner's latest clarification takes precedence over historical circle-only/gallery-only appearance and blanket floating-client deferral. See [avatar-plan.md](avatar-plan.md) for the detailed contract.
+
+- First release: a simple minimalist lavender ball is the default living companion; users may replace it with their own purchased, already rigged 2D anime model.
+- First-release local import is confirmed. The earlier suggestion to defer every rigged model is superseded; purchasing/commissioning an official Laven anime character is optional future work.
+- Imported model files remain locally on the importing user's computer/device. No cloud upload, model-file synchronization, repository copy, or provider submission. Account settings/history/memory otherwise retain their existing sync.
+- The latest clarified type is rigged 2D. A 3D importer, automatic rigging, and arbitrary-format support are not selected.
+- Format is not selected. Live2D Cubism is the Director's first candidate for evaluation, subject to owner selection, SDK release terms, compatible packages, and real-device evidence.
+- Proposed device-local appearance controls in Settings > My Companion: Import, Preview, Use model, Replace, Remove local model, and Use default ball. Keep existing gallery choices and other companion settings. Model selection/references should be local and account-partitioned; another device requires a separate import and uses a valid gallery/ball fallback.
+- Browser-local persistence is not a guaranteed backup: test quota/eviction/private browsing and explain re-import after clearing site data. Exact package/resource limits and model animation mappings remain engineering proposals to validate.
+- The owner previously confirmed floating above other applications. Retain that requirement; first operating systems and web/floating release sequencing remain undecided. T078-T082 cover the platform decision and companion-client work. An in-page widget does not prove cross-app overlay support.
+- T070-T077 cover avatar/import delivery. No renderer, import, runtime installation, purchase, native client, or real-device check has been completed. Existing voice, captions, privacy, cancellation, and usage rules remain in force.
 
 ### Confirmed Product Priorities
 
@@ -71,11 +85,11 @@ These priorities guide a real startup product. The initial online release remain
 ### Confirmed Main Screen Direction
 
 - Use a voice-focused main conversation screen.
-- Place a lavender circle at the center of the screen as the default voice visualization.
-- Animate the circle subtly to communicate listening, thinking, and speaking states.
+- Place a minimalist lavender ball at the center as the default living companion (R001).
+- Animate actual local listening, thinking, and speaking states; a supported imported rigged 2D model can replace the ball in the first release.
 - Let users customize the image shown within the circle by selecting a ready-made image from the app's gallery.
-- Use the lavender circle as the default before the user selects a gallery image.
-- The selected customization method is the app's image gallery; personal image uploads are not part of the currently selected scope.
+- Use the lavender ball as the default before a gallery or valid device-local model is selected.
+- Preserve the static-image gallery. R001 additionally selects local import of a user-owned, already rigged 2D model; static portrait uploads and a 3D importer are not selected by that clarification.
 - The initial gallery offers both flowers/nature/minimal abstract images and cute illustrated characters/animals, confirmed in Step 115. Keep the collection visually consistent with the minimal lavender interface. Exact assets, collection size, image presentation, and how the selected image interacts with state animations remain to be defined. The selected gallery image is part of the account-synchronized companion profile. No gallery assets have been created yet.
 - Include a microphone control.
 - Show captions below the central voice visualization, using the owner's "like Pingo" description as a reference for this placement. No other Pingo-specific appearance or behavior has been specified.
@@ -249,10 +263,10 @@ Use a collapsed navigation menu on both mobile and desktop. A Menu button opens 
 | Page | Content and actions |
 | --- | --- |
 | First setup | Begin with an optional AI-led voice interview using saved/default companion settings: three to five core questions plus three optional learning-language questions (approximately six to eight total), with readable text and typed fallback. Start interview explicitly enables eligible voice capture. On completion, save eligible introductory memories automatically when memory is enabled, end the interview session, then suggest a personality preset, gallery image, and voice from available catalogs. The user confirms suggestions, chooses alternatives, or skips customization. Save accepted choices or use existing/default settings and enter a new normal conversation. Keep the interview as separate text-only history. No mandatory preset selection. |
-| Conversation | Central circle and AI captions; voice interaction; open the text panel, read both speakers' messages, send typed messages, and open source links attached to web-assisted replies. |
+| Conversation | Default ball or locally imported supported rigged 2D model, with AI captions; voice interaction; open the text panel, read both speakers' messages, send typed messages, and open source links attached to web-assisted replies. |
 | History | List retained conversations with short topic-based titles and dates, latest accepted user activity first. No search field. Allow manual title renaming and preserve those names through later automatic updates. Confirm individual or multi-select history deletion. Stop a selected active conversation across its sessions before deletion. Open/read text, resume, or delete history while retaining saved personalization memory. No voice replay or Listen again controls. Keep compact active-session controls. |
 | Settings | Configure light/dark/system theme, primary accent color, Show AI captions, interface language, manual/automatic voice startup, automatic conversation follow-ups, and a Web search on/off toggle; access My Companion and Memory sections; delete the user's own account after explicit confirmation. Keep active voice-session controls available. Show Trial Access and AI Budget only to the owner. |
-| Settings > My Companion | Edit the companion's name; select a personality preset and adjust traits; write, edit, or clear optional additional personality instructions; select a gallery image; choose a voice, preview it, and adjust speaking speed. Automatically save edits without a Save button and show saving/saved/failure status. Offer Reset personality and a 1,000-character instruction field with a counter. Preview alone does not save a voice selection. |
+| Settings > My Companion | Edit the companion's name; select a personality preset and adjust traits; write, edit, or clear optional additional personality instructions; select a gallery image or import/replace/remove a device-local supported rigged 2D model and return to the default ball; choose a voice, preview it, and adjust speaking speed. Automatically save edits without a Save button and show saving/saved/failure status. Offer Reset personality and a 1,000-character instruction field with a counter. Preview alone does not save a voice selection. |
 | Settings > Memory | Use two tabs: Facts/preferences and Conversation summaries. Add a fact/preference directly; view, edit with an explicit Save, and delete items/summaries; disable memory. No user-facing search field. Apply the existing Enable memory and save this confirmation if a new item is submitted while memory is disabled. Developer diagnostics search is limited to the developer's own account and designated test accounts, without a new user-facing dashboard. |
 | Settings > Trial Access (owner only) | View permitted/revoked email entries, add an email, revoke access while retaining data, and reinstate access to the same account. Show daily allowances for trial accounts and the owner's account; allow owner-only per-account adjustment for the current UTC day, reverting to the 30-minute default at the next reset. Show the override expiry and preserve used time when editing. Hidden from ordinary users and protected by server authorization; this does not grant access to private conversation or memory content. |
 | Settings > AI Budget (owner only) | View current-period AI spending, monthly cap, and remaining budget; raise the cap for the current month only. Show that next month's base cap returns to USD 10. Does not purchase provider credits. |
@@ -355,13 +369,15 @@ project-root/
         admin/ai-budget/       # Owner-authorized budget configuration endpoints
         usage/                 # Account allowance and usage status
     components/
-      voice/                   # Circle, word-by-word sentence captions, session controls
+      voice/                   # Word-progress captions and session controls
+      avatar/                  # Ball, imported 2D renderer, local import controls
       chat/                    # Messages, text input, desktop/mobile panels
       settings/                # Personality, voice, theme, memory controls
       ui/                      # Shared buttons, dialogs, menu, form controls
     hooks/                     # Voice session and synchronized UI state
     lib/
       audio/                   # VAD, recording, playback, interruption handling
+      avatar/                  # Local validation/storage, runtime adapter, state mapping
       ai/                      # OpenRouter clients, model IDs, prompt builders
       supabase/                # Browser/server clients and session utilities
       personalization/         # Memory retrieval and summary processing logic
@@ -371,7 +387,7 @@ project-root/
       validation/              # Request and settings validation
     types/                     # Shared application and generated database types
   public/
-    gallery/                   # Ready-made companion images
+    gallery/                   # Bundled licensed images; never user-imported packages
     icons/                     # Application icons
   supabase/
     migrations/                # Versioned database changes and access policies
@@ -439,14 +455,14 @@ Google's native grounding separately lists USD 14 per 1,000 searches after its d
 - Preserve an active voice session when navigating within the app from Conversation to History or Settings. Continue listening, speaking, and elapsed-session quota accounting, and expose compact controls including Stop. Returning to Conversation must reuse the active session without duplicate microphone capture or a new quota timer.
 - Concurrent sessions are supported across devices/tabs and join the account's shared active conversation. Give each session independent microphone capture, interruption handling, and lifecycle. Stopping or interrupting one session does not automatically stop the others; account-wide access or usage exhaustion still applies to every session.
 - Play each AI reply's audio only on the device/tab that submitted the corresponding spoken or typed user turn. Other surfaces receive the shared text only, even when they have active voice sessions. Track the originating surface/session for each turn and route audio accordingly. Shared text synchronization must not trigger automatic speech playback on receiving surfaces.
-- The central circle's speaking state and AI captions follow local audio playback. Do not show a remote reply as locally speaking merely because its text arrives in the shared chat. Other devices may continue their own session listening while displaying the synchronized text. Recovery when the originating surface disconnects remains to be designed.
+- The active companion's speaking state and AI captions follow local audio playback. Do not show a remote reply as locally speaking merely because its text arrives in the shared chat. Other devices may continue their own session listening while displaying the synchronized text. Recovery when the originating surface disconnects remains to be designed.
 - Ordinary navigation does not change which conversation receives the active session's messages or end that conversation merely because another page is viewed. Explicitly starting another conversation or resuming a different history thread switches all active sessions to the selected shared conversation, as confirmed in Step 89. When switching browser tabs/apps or locking the screen, attempt to continue the current voice session where the browser and device permit it, with a paused-state fallback when continuation is unavailable. Background capture, playback, interruption, and reliable quota accounting require device testing; do not promise uninterrupted background or locked-screen operation. Disconnection and closure recovery remain to be specified.
 
-### Future Floating Companion and Browser Feasibility - October 1, 2026
+### Floating Companion - Historical Feasibility Notes Updated by R001
 
-- Defer the interactive floating companion to a future desktop software phase. It is not a requirement for the first browser-based release. The desktop framework, packaging, and operating-system integration have not been selected.
+- Historical October 1 scope deferred floating delivery. R001 now retains the owner's confirmed cross-app floating companion; T078 must establish first OS targets and rollout sequence. Framework, packaging, and OS integration remain unselected. The historical browser notes below are reference only and require re-verification.
 - Confirmed future content: a customizable companion picture, session status, captions, and pause/resume and stop controls. Make the control menu collapsible so users can hide it and reveal it again. Hiding controls must not pause or stop the conversation. Exact default visibility and layout remain design details.
-- Reuse the existing selectable companion gallery image as the proposed initial image source; separate picture uploads or a separate floating-image setting have not been selected.
+- Use the same default ball or supported locally imported 2D model and existing gallery options. Browser and native local stores are not automatically shared; require a separate import rather than transmitting assets.
 - Browser feasibility reference only: a compact Document Picture-in-Picture window can contain the companion image and interactive HTML controls. This API supports an always-on-top window above other windows, not just a video. Chrome and Edge desktop are possible validation targets if a browser preview is considered later. This is not a selected first-release implementation or a tested capability of this app. [Chrome Document PiP documentation](https://developer.chrome.com/docs/web-platform/document-picture-in-picture/).
 - The reviewed MDN compatibility data lists Chrome desktop support from version 116, Edge support through the Chrome mirror, and Firefox support from version 151. Chrome Android, Firefox Android, Safari, and Safari iOS do not support this API in the reviewed data. Feature-detect the actual runtime instead of assuming availability from the device name. Proposed unsupported-browser fallback: a floating companion inside the app page, which cannot stay above other apps. [MDN compatibility data](https://github.com/mdn/browser-compat-data/blob/main/api/DocumentPictureInPicture.json).
 - If a browser PiP version is pursued later, propose an explicit Open floating companion action. Normal Document PiP opening requires user activation; automatic opening is a separate capability with additional browser eligibility conditions and has not been selected. The window cannot outlive its opener, and the website cannot set its screen position. A browser PiP window does not establish support for a frameless, transparent, freely positioned system-wide icon or locked-screen UI. Those desktop-software requirements need separate validation. [Chrome Document PiP documentation](https://developer.chrome.com/docs/web-platform/document-picture-in-picture/), [MDN API overview](https://developer.mozilla.org/en-US/docs/Web/API/Document_Picture-in-Picture_API).
@@ -590,7 +606,7 @@ Source-code storage, confirmed in Step 105: keep the project locally and use a p
 
 The first private trial has no fixed deadline, confirmed in Step 107. Begin testing when the voice pipeline and core product flows are ready for a usable trial. Prioritize the previously selected voice-quality and conversational-flow validation before inviting testers. This decision does not establish a public launch date.
 
-Initial test surfaces, confirmed in Step 108: an Android phone and web-browser use. Laven AI remains a browser-based app in the first release; no native Android app is selected. Plan real-device microphone, playback, interruption, caption, and session-recovery checks on Android and desktop web. Google Chrome is the primary test browser, confirmed in Step 109. Mobile and desktop retain equal product priority; available test devices and the primary test browser do not establish exclusive platform support or confirm iPhone testing.
+Initial test surfaces, confirmed in Step 108: an Android phone and web-browser use. The web app remains the base; R001 adds floating-delivery planning with first OS targets and sequence still pending. Plan real-device microphone, playback, interruption, caption, and session-recovery checks on Android and desktop web. Google Chrome is the primary test browser, confirmed in Step 109. Mobile and desktop retain equal product priority; available test devices and the primary test browser do not establish exclusive platform support or confirm iPhone testing.
 
 ### Initial Infrastructure Cost Review - October 1, 2026
 
@@ -756,11 +772,11 @@ To define together: authentication implementation and account lifecycle, data st
 
 The deliverable is an online startup MVP, not a local-only prototype. The Director's launch milestones are defined in `outputs/startup-launch-plan.md`; the former local-prototype Executor Brief 01 is superseded and must not be dispatched as the current assignment. The current prepared assignment is `outputs/executor-brief-02-production-foundation.md`; no Executor has been assigned or started. Local tooling and mocked tests may support development, but do not satisfy online release acceptance.
 
-The October 9 task breakdown is in `outputs/task-backlog.md` (69 tasks). `outputs/requirements-coverage.md` maps all 182 discovery decisions and later instructions; `outputs/progress_tracking.md` is the authoritative status/evidence tracker. Use one bounded task per implementation handoff. Coverage mapping does not mean implementation is complete. T069 records the current public GitHub repository versus the earlier private-repository plan without changing repository visibility.
+The October 9 task breakdown is in `outputs/task-backlog.md` (82 tasks). `outputs/requirements-coverage.md` maps all 182 discovery decisions and later instructions; `outputs/progress_tracking.md` is the authoritative status/evidence tracker. Use one bounded task per implementation handoff. Coverage mapping does not mean implementation is complete. T069 records the current public GitHub repository versus the earlier private-repository plan without changing repository visibility.
 
 The owner has requested a minimal-budget approach. Keep the existing USD 10/month AI ceiling as a planning control; it is not funded credit or authorization to purchase usage. Identify actual funding, domain, email, hosting, and inference dependencies before promising a launch cost or date. No paid calls or external setup have been authorized by this planning revision.
 
-1. The delivery platform is confirmed as online responsive web. Define the production MVP release gate while retaining the companion-first product and private-trial audience. Native delivery and public registration are not selected for this release.
+1. The delivery platform is confirmed as online responsive web. Define the production MVP release gate while retaining the companion-first product and private-trial audience. Public registration remains outside the private trial. R001 requires an explicit first-platform and release-sequencing decision for floating delivery.
 2. Verify exact OpenRouter identifiers, completed-audio STT, regular streaming LLM replies, expressive TTS, Thai/English quality, speed options, cancellation, and caption alignment. Review replacements under Step 181 and validate the chosen hosting/runtime path before committing implementation effort or paid testing.
 3. Assign an Executor to implement the smallest real end-to-end flow: authenticated eligible user, cloud account/settings/history, and a real voice turn through the protected backend. Measure actual cost and latency; do not use simulated replies as evidence that this integration works.
 4. Complete selected personalization, onboarding, history, customization, daily/monthly limits, background jobs, cross-session controls, and privacy/deletion guards. Protect provider credentials on the server and verify account isolation.
@@ -782,7 +798,7 @@ These are reviewable engineering/design proposals, not new owner-confirmed requi
 | Initial diagnostics | Reuse scoped local development tooling with the developer's own or synthetic test data. No new private-user monitoring dashboard or paid diagnostics service. |
 | Caption prototype | If needed, show the currently spoken sentence and clear it at actual completion. Label this as the temporary prototype behavior; retain accurate word-level reveal as the final requirement. |
 
-No paid embedding service, analytics integration, in-app feedback delivery service, audio archive, native Android app, or desktop floating-companion implementation is added by these proposals. The first release retains the previously selected features; implementation stages are not a silent reduction of that scope.
+No paid embedding service, analytics integration, in-app feedback delivery service, or audio archive is added by these proposals. R001 separately records first-release ball/local 2D import and the floating requirement, with runtime/platform choices pending. The first release retains the previously selected features; implementation stages are not a silent reduction of that scope.
 
 First prototype validation priority: voice quality and conversational flow, confirmed in Step 99. Validate Thai, English, and mixed-language transcription and speech output, voice tone, speaking-speed behavior, interruptions, and caption synchronization on mobile and desktop. Personalization/memory behavior and responsive interface usability remain required subsequent validation areas.
 
@@ -792,7 +808,7 @@ Step 119 selects an approximately two-second silence wait in continuous mode, le
 
 Plan the initial private trial for one to five participants, including the owner, as confirmed in Step 101. Use this expected total for test planning and shared-budget scenarios. This is not a registration cap or a promise that the USD 10 budget covers every participant's full daily allowance.
 
-Future expansion: desktop software with an interactive floating companion, a customizable picture, session status, captions, and a collapsible control menu. Keep this outside the first browser-based release; select desktop technology and validate operating-system behavior in that later phase.
+R001 updates floating delivery: preserve presence above other applications, the shared companion/session/captions, and hideable controls. Choose first supported OS targets and rollout sequencing through T078 rather than assuming universal overlay support or quietly deferring the requirement.
 
 ## 7. Decision Record
 

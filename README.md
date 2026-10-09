@@ -10,8 +10,9 @@ This repository contains product planning and an implementation handoff. Applica
 
 - [Project blueprint](outputs/blueprint.md): English product specification, behavior, folder structure, and decision history.
 - [Startup launch plan](outputs/startup-launch-plan.md): delivery milestones and real online release criteria.
+- [Avatar and floating plan](outputs/avatar-plan.md): default ball, first-release local rigged-2D import, pending format, and floating-platform gates.
 - [Build agent prompt](outputs/build-agent-prompt.md): instructions to give an AI implementation agent alongside the project documents.
-- [Small-task backlog](outputs/task-backlog.md): 69 bounded tasks with dependencies, suggested roles, and acceptance evidence.
+- [Small-task backlog](outputs/task-backlog.md): 82 bounded tasks with dependencies, suggested roles, and acceptance evidence.
 - [Progress tracker](outputs/progress_tracking.md): authoritative task states, evidence, release gates, and blockers.
 - [Requirements coverage](outputs/requirements-coverage.md): mapping of all 182 discovery decisions and later instructions to work assignments.
 - [Production foundation brief](outputs/executor-brief-02-production-foundation.md): model/runtime feasibility and integration checklist.
@@ -25,7 +26,8 @@ Start with the blueprint, launch plan, and progress tracker. Assign one backlog 
 - Supabase for authentication and account-scoped persistence.
 - Cloudflare for hosting and the verified deployment/runtime path.
 - OpenRouter for the cascaded transcription, conversation, and speech pipeline.
-- Thai/English conversation, a minimal lavender interface, and user-controlled personalization memory.
+- Thai/English conversation, a minimal lavender ball, optional first-release local rigged-2D import, and user-controlled personalization memory.
+- Cross-app floating companion retained; first operating systems and web/floating rollout sequence still require selection. User model files remain device-local.
 
 Exact model availability, deployment compatibility, voice quality, latency, and operating costs still require verification. Historical estimates and selected model identifiers are not proof that live integrations work.
 

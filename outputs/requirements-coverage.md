@@ -6,7 +6,7 @@ Status: Planning coverage prepared for review. Every numbered blueprint decision
 ## Audit Result
 
 - Numbered discovery decisions indexed: **182 / 182**.
-- Backlog tasks: **69**, including the post-trial recommendation and repository-alignment task.
+- Backlog tasks: **82**, including T070-T077 avatars and T078-T082 floating delivery under R001.
 - Unmapped numbered decisions: **0**.
 - Full behavior remains in `blueprint.md`; the summaries below are navigation aids, not replacements for detailed acceptance conditions.
 - Current task status and evidence are recorded in `progress_tracking.md`. A mapped requirement can still be unimplemented, unverified, or blocked.
@@ -31,13 +31,13 @@ Read the full matching Step in the blueprint and the corresponding backlog task 
 | Step 6 | Launch with Thai and English, automatic language switching, and mixed Thai-English conversation support. | selected | `T042`, `T061` | - |
 | Step 7 | Start with personal use by the owner to test and refine the experience. | refined | `T063` | Owner-only start expanded to owner/invitees in Step 46. |
 | Step 8 | Mobile and desktop have equal priority, with a responsive layout suited to each screen size. | selected | `T010`, `T022`, `T061` | - |
-| Step 9 | Use a voice-focused main screen with a central circle or waveform, microphone control, accessible conversation text, and captions beneath the visualization (described by the owner as "like Pingo"). | selected | `T022`, `T059` | - |
+| Step 9 | Use a voice-focused main screen with a central circle or waveform, microphone control, accessible conversation text, and captions beneath the visualization (described by the owner as "like Pingo"). | refined | `T022`, `T059`, `T070`-`T077` | R001 adds a default living ball and optional local rigged-2D import; preserve applicable gallery/account settings. |
 | Step 10 | Show only the AI's response in the captions beneath the visualization while the AI is speaking. | selected | `T059` | - |
 | Step 11 | Minimalist styling, lavender purple as the default primary accent, light/dark/system theme options, and user-selectable accent color. | selected | `T038` | - |
-| Step 12 | Use a lavender circle with subtle listening, thinking, and speaking animations. | selected | `T022`, `T040` | - |
-| Step 13 | Users select a ready-made circle image from the app's gallery, with the lavender circle as the default before selection. | selected | `T040` | - |
+| Step 12 | Use a lavender circle with subtle listening, thinking, and speaking animations. | refined | `T022`, `T040`, `T070`-`T077` | R001 adds a default living ball and optional local rigged-2D import; preserve applicable gallery/account settings. |
+| Step 13 | Users select a ready-made circle image from the app's gallery, with the lavender circle as the default before selection. | refined | `T040`, `T070`-`T077` | R001 adds a default living ball and optional local rigged-2D import; preserve applicable gallery/account settings. |
 | Step 14 | The full conversation text view shows both user and AI messages and includes a text input and Send button. | selected | `T023` | - |
-| Step 15 | Provide one main companion in the first release, with its name, personality, and selected gallery image editable at any time. | selected | `T017`, `T039`, `T040`, `T041` | - |
+| Step 15 | Provide one main companion in the first release, with its name, personality, and selected gallery image editable at any time. | refined | `T017`, `T039`, `T040`, `T041`, `T070`-`T077` | R001 adds a default living ball and optional local rigged-2D import; preserve applicable gallery/account settings. |
 | Step 16 | Provide a voice library, voice sample previews, and a speaking-speed control. | refined | `T004`, `T041` | Exact route and three speed choices use later decisions. |
 | Step 17 | Emotional speech tone adapts to both the configured personality and the conversation context. | selected | `T068` | - |
 | Step 18 | Automatically save conversation history with read, resume, and delete actions. | selected | `T028`, `T043`, `T047`, `T048`, `T050` | - |
@@ -101,7 +101,7 @@ Read the full matching Step in the blueprint and the corresponding backlog task 
 | Step 76 | Enable automatic conversation follow-ups by default and allow users to turn them off or on in Settings. | selected | `T035`, `T037`, `T038` | - |
 | Step 77 | After the second unanswered proactive follow-up finishes speaking, wait a further two minutes without user input, then automatically pause the local session's microphone listening and elapsed-session quota accounting. | selected | `T033`, `T035` | - |
 | Step 78 | Attempt to continue the existing local voice session when the user switches tabs/apps or locks the screen, where the browser and device support it. | validation | `T033`, `T061` | Continue in background only where the actual browser/device permits. |
-| Step 79 | Include the companion picture, session status, captions, and pause/resume and stop controls, with a control menu that users can hide and reveal. | later | Later roadmap | Desktop floating companion and hideable controls remain outside this trial. |
+| Step 79 | Include the companion picture, session status, captions, and pause/resume and stop controls, with a control menu that users can hide and reveal. | refined | `T078`-`T082` | R001 confirms cross-app presence; first OS targets and rollout sequence pending. |
 | Step 80 | Keep the user's transcribed text in conversation history without persistently storing the user's recordings or offering playback of those recordings. | selected | `T024`, `T025`, `T049`, `T060` | - |
 | Step 81 | Initially selected temporary caching for generated AI audio and TTS regeneration when unavailable. | superseded | `T027`, `T034` | Step 110 forbids stored/reusable AI audio, replacing the cache choice. |
 | Step 82 | Automatically delete message history after seven days, replacing the proposed 90-day period. | selected | `T049` | - |
@@ -137,7 +137,7 @@ Read the full matching Step in the blueprint and the corresponding backlog task 
 | Step 112 | Default to short, concise replies, roughly one to three sentences. | selected | `T039`, `T042` | - |
 | Step 113 | Use short topic-based conversation titles with dates in History. | selected | `T043` | - |
 | Step 114 | When switching between continuous conversation and hold-to-talk during local AI speech, stop that speech and change mode immediately. | selected | `T032` | - |
-| Step 115 | Offer both flowers/nature/minimal abstract images and cute illustrated characters/animals in the companion-image gallery. | selected | `T040` | - |
+| Step 115 | Offer both flowers/nature/minimal abstract images and cute illustrated characters/animals in the companion-image gallery. | refined | `T040`, `T070`-`T077` | R001 adds a default living ball and optional local rigged-2D import; preserve applicable gallery/account settings. |
 | Step 116 | Include an optional free-text field for additional personality/conversation-style instructions in Settings > My Companion, alongside presets and sliders. | selected | `T039`, `T042` | - |
 | Step 117 | Give user-written custom personality instructions precedence over conflicting preset/slider style preferences. | selected | `T039`, `T042` | - |
 | Step 118 | Include Add memory in Settings > Memory for directly entering and saving a fact/preference. | selected | `T044`, `T067` | - |
@@ -224,7 +224,10 @@ Read the full matching Step in the blueprint and the corresponding backlog task 
 | Proposed engineering/visual defaults in blueprint Section 6 | T012-T013, T022, T038-T044, T047-T050 | Autosave timing, pagination, field limits, gallery size, and adapter details remain proposals, not falsely confirmed selections |
 | Pending explicit-memory requests: duplicate/cancellation/save failure handling | T018, T044-T046, T067 | Specify request identity/lifetime and reject stale confirmation/writes; do not claim a pending save succeeded |
 | Initial private trial expected 1-5; no fixed deadline/price | T008, T063-T064 | Expected size is not a registration cap; commercial pricing and public launch remain undecided |
-| Floating desktop companion, native clients, extra languages, full tutor, Pingo-like future persona | Backlog Later Work; blueprint scope | Retained as later roadmap needs; not silently built or dropped from planning |
+| Extra languages, full tutor, Pingo-like future persona, official purchased mascot, 3D import | Backlog Later Work; R001 | Later work; first-release local 2D import remains selected |
+| R001: default ball and optional first-release local rigged-2D import | T070-T077; avatar-plan.md | Files local only; format/SDK terms/device evidence pending; no cloud file sync |
+| R001: cross-app floating companion and hideable controls | T078-T082; avatar-plan.md | Selected requirement; first platforms and web/floating sequence pending |
+| Team lives in Laos and is exploring global funding | T008; startup-launch-plan.md | No company jurisdiction, grant eligibility, investment, or funded allowance established |
 
 ## Remaining Alignment and Validation
 
@@ -232,5 +235,7 @@ Read the full matching Step in the blueprint and the corresponding backlog task 
 2. Models/runtime/email: exact available identifiers, Thai speech quality, voice speed/timing, deployment adapter/runtime, ordinary invitee email delivery, and credentials need the Phase 1 evidence and live checks. Historical links/prices are not treated as current proof.
 3. Funding/live evidence: actual provider credit, authorized paid-test allowance, target-device access, deployment/domain setup, and measured costs/latency are pending. These do not justify declaring a mock complete.
 4. Detailed defaults: implementation must resolve remaining factual categories, equivalent deleted-fact matching, safe auth linking/recovery, owner deletion, scheduling/metering boundaries, and update ordering without changing selected behavior. Record any material conflict or unsupported target for owner review.
+
+R001 is mapped separately from the original 182 numbered decisions; no new discovery Step numbers were invented. Its pending details are in avatar-plan.md and the tracker.
 
 Mapping coverage means the needs are represented in work assignments. It does not mean all 182 decisions are separate features, all proposed defaults are mandatory, all targets are feasible, or any application requirement has already passed acceptance.
