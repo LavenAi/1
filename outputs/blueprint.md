@@ -9,7 +9,7 @@ Desired domain: lavenai.space. Not yet purchased; availability, registration pri
 
 ## 1. Project Goal
 
-Build Laven AI as an actual startup product: an online conversational AI companion with real user accounts, cloud-persisted data, and live AI/voice integration. The owner has reconfirmed an online production web app accessed through mobile and desktop browsers. Retain Next.js/TypeScript, Supabase, Cloudflare, and the cascaded OpenRouter architecture. A local prototype or simulated browser demo is a development aid, not the final product or launch deliverable. The web app remains the base platform; R001 records the first-release floating-companion requirement; supported OS targets remain pending.
+Build Laven AI as an actual startup product: an online conversational AI companion with real user accounts, cloud-persisted data, and live AI/voice integration. The owner has reconfirmed an online production web app accessed through mobile and desktop browsers. Retain Next.js/TypeScript, Supabase, Cloudflare, and the cascaded OpenRouter architecture. A local prototype or simulated browser demo is a development aid, not the final product or launch deliverable. The web app remains the base platform; R001 records the first-release floating-companion requirement; Windows is the selected floating OS; exact supported Windows versions and runtime remain pending.
 Position the product as a Hyper-Personalization App, with an AI companion as its primary use case. Personalization is a core product capability.
 Define the product step by step with the owner before implementation.
 
@@ -24,7 +24,7 @@ The owner's latest clarification takes precedence over historical circle-only/ga
 - Format is not selected. Live2D Cubism is the Director's first candidate for evaluation, subject to owner selection, SDK release terms, compatible packages, and real-device evidence.
 - Proposed device-local appearance controls in Settings > My Companion: Import, Preview, Use model, Replace, Remove local model, and Use default ball. Keep existing gallery choices and other companion settings. Model selection/references should be local and account-partitioned; another device requires a separate import and uses a valid gallery/ball fallback.
 - Browser-local persistence is not a guaranteed backup: test quota/eviction/private browsing and explain re-import after clearing site data. Exact package/resource limits and model animation mappings remain engineering proposals to validate.
-- The owner confirmed floating above other applications in the first release on October 9, 2026. First supported operating systems remain undecided; web-only delivery does not pass this release gate. T078-T082 cover the platform decision and companion-client work. An in-page widget does not prove cross-app overlay support.
+- The owner confirmed floating above other applications in the first release on October 9, 2026. Windows is selected as the first floating OS; Android floating and other desktop OS clients are later; web-only delivery does not pass this release gate. T078-T082 cover the platform decision and companion-client work. An in-page widget does not prove cross-app overlay support.
 - T070-T077 cover avatar/import delivery. No renderer, import, runtime installation, purchase, native client, or real-device check has been completed. Existing voice, captions, privacy, cancellation, and usage rules remain in force.
 
 ### Confirmed Product Priorities
@@ -460,7 +460,7 @@ Google's native grounding separately lists USD 14 per 1,000 searches after its d
 
 ### Floating Companion - Historical Feasibility Notes Updated by R001
 
-- Historical October 1 scope deferred floating delivery. R001 now retains the owner's confirmed cross-app floating companion; The owner has now selected floating in the first release; T078 must establish first OS targets. Framework, packaging, and OS integration remain unselected. The historical browser notes below are reference only and require re-verification.
+- Historical October 1 scope deferred floating delivery. R001 confirms Windows floating in the first release; T078 must verify the Windows version/runtime/packaging matrix. Framework, packaging, and OS integration remain unselected. The historical browser notes below are reference only and require re-verification.
 - Confirmed future content: a customizable companion picture, session status, captions, and pause/resume and stop controls. Make the control menu collapsible so users can hide it and reveal it again. Hiding controls must not pause or stop the conversation. Exact default visibility and layout remain design details.
 - Use the same default ball or supported locally imported 2D model and existing gallery options. Browser and native local stores are not automatically shared; require a separate import rather than transmitting assets.
 - Browser feasibility reference only: a compact Document Picture-in-Picture window can contain the companion image and interactive HTML controls. This API supports an always-on-top window above other windows, not just a video. Chrome and Edge desktop are possible validation targets if a browser preview is considered later. This is not a selected first-release implementation or a tested capability of this app. [Chrome Document PiP documentation](https://developer.chrome.com/docs/web-platform/document-picture-in-picture/).
@@ -606,7 +606,7 @@ Source-code storage, confirmed in Step 105: keep the project locally and use a p
 
 The first private trial has no fixed deadline, confirmed in Step 107. Begin testing when the voice pipeline and core product flows are ready for a usable trial. Prioritize the previously selected voice-quality and conversational-flow validation before inviting testers. This decision does not establish a public launch date.
 
-Initial test surfaces, confirmed in Step 108: an Android phone and web-browser use. The web app remains the base; R001 includes floating delivery in the first release, with first supported OS targets still pending. Plan real-device microphone, playback, interruption, caption, and session-recovery checks on Android and desktop web. Google Chrome is the primary test browser, confirmed in Step 109. Mobile and desktop retain equal product priority; available test devices and the primary test browser do not establish exclusive platform support or confirm iPhone testing.
+Initial test surfaces, confirmed in Step 108: an Android phone and web-browser use. The web app remains the base; R001 includes floating delivery in the first release, with Windows selected for floating; Android web support remains unchanged and Android floating is later. Plan real-device microphone, playback, interruption, caption, and session-recovery checks on Android and desktop web. Google Chrome is the primary test browser, confirmed in Step 109. Mobile and desktop retain equal product priority; available test devices and the primary test browser do not establish exclusive platform support or confirm iPhone testing.
 
 ### Initial Infrastructure Cost Review - October 1, 2026
 
@@ -776,7 +776,7 @@ The October 9 task breakdown is in `outputs/task-backlog.md` (82 tasks). `output
 
 The owner has requested a minimal-budget approach. Keep the existing USD 10/month AI ceiling as a planning control; it is not funded credit or authorization to purchase usage. Identify actual funding, domain, email, hosting, and inference dependencies before promising a launch cost or date. No paid calls or external setup have been authorized by this planning revision.
 
-1. The delivery platform is confirmed as online responsive web. Define the production MVP release gate while retaining the companion-first product and private-trial audience. Public registration remains outside the private trial. R001 includes floating delivery in this first release; an explicit first-platform decision is still required.
+1. The delivery platform is confirmed as online responsive web. Define the production MVP release gate while retaining the companion-first product and private-trial audience. Public registration remains outside the private trial. R001 includes floating delivery in this first release; Windows is the selected first floating platform; runtime/version evidence is still required.
 2. Verify exact OpenRouter identifiers, completed-audio STT, regular streaming LLM replies, expressive TTS, Thai/English quality, speed options, cancellation, and caption alignment. Review replacements under Step 181 and validate the chosen hosting/runtime path before committing implementation effort or paid testing.
 3. Assign an Executor to implement the smallest real end-to-end flow: authenticated eligible user, cloud account/settings/history, and a real voice turn through the protected backend. Measure actual cost and latency; do not use simulated replies as evidence that this integration works.
 4. Complete selected personalization, onboarding, history, customization, daily/monthly limits, background jobs, cross-session controls, and privacy/deletion guards. Protect provider credentials on the server and verify account isolation.
@@ -808,7 +808,7 @@ Step 119 selects an approximately two-second silence wait in continuous mode, le
 
 Plan the initial private trial for one to five participants, including the owner, as confirmed in Step 101. Use this expected total for test planning and shared-budget scenarios. This is not a registration cap or a promise that the USD 10 budget covers every participant's full daily allowance.
 
-R001 updates floating delivery: preserve presence above other applications, the shared companion/session/captions, and hideable controls. Choose first supported OS targets through T078; floating ships in the first release and requires T082 acceptance on those targets. Do not assume universal overlay support or quietly defer it.
+R001 updates floating delivery: preserve presence above other applications, the shared companion/session/captions, and hideable controls. Verify the selected Windows floating platform through T078; it ships in the first release and requires T082 acceptance. Android floating and other desktop OS clients remain later. Do not assume universal overlay support or quietly defer it.
 
 ## 7. Decision Record
 

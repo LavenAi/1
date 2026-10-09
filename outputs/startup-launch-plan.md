@@ -12,13 +12,13 @@ The first release remains the selected owner/invitee private trial. A public pai
 
 The owner reconfirms an online production web app accessed through mobile and desktop browsers. Initial validation targets remain Android Chrome and desktop Chrome. Retain Next.js/TypeScript, Supabase, Cloudflare, and the cascaded OpenRouter pipeline.
 
-The deployable online product is the outcome. A browser-based delivery platform does not make this a local-only app. R001 retains the owner's cross-app floating companion. Floating is confirmed in the first release; first OS targets and native/framework decisions are pending T078; do not promise universal overlay support.
+The deployable online product is the outcome. A browser-based delivery platform does not make this a local-only app. R001 retains the owner's cross-app floating companion. Floating is confirmed in the first release; Windows is selected for floating; supported Windows versions and native/framework evidence are pending T078; do not promise universal overlay support.
 
 ## Avatar and Floating Revision R001
 
 First-release default is a minimalist lavender ball, with optional import of a user-purchased already rigged 2D model stored only on that user's device. Format is pending; Live2D is the first proposed evaluation candidate. See avatar-plan.md and T070-T077. User model files do not sync; other account/history/memory settings retain their existing behavior. A purchased official Laven mascot and 3D import can be future work.
 
-Cross-app floating presence is confirmed; T078-T082 establish targets, shared session integration, selected clients, and release evidence. The owner confirmed floating alongside the web app in the first release on October 9, 2026. First supported OS targets remain to be selected. A web-only build is an intermediate result; T082 must pass for the selected floating targets before first-release rollout.
+Cross-app floating presence is confirmed; T078-T082 establish targets, shared session integration, selected clients, and release evidence. The owner confirmed floating alongside the web app in the first release on October 9, 2026. Windows is selected for the first floating release. Android floating and other desktop OS clients are later; responsive mobile/desktop web scope is unchanged. A web-only build is an intermediate result; T082 must pass for the selected floating targets before first-release rollout.
 
 The team lives in Laos and is exploring global funding. Company jurisdiction and investor/program eligibility are unselected. T008 must separate credits from cash, runtime/asset costs from inference, and application caps from funded credit; no funding or incorporation is established.
 
@@ -53,7 +53,7 @@ Milestone numbering defines gates, not a fixed calendar. Where authentication is
 - Provider credentials remain server-side. Text/audio retention behavior and unverified provider retention are clearly documented.
 - A deployment/recovery procedure exists, failures are visible to the team, and real-user rollout has a concrete review gate.
 
-Avatar release evidence additionally requires T077's actual ball and local rig import checks. T078 must establish the first supported OS targets, and T082 floating acceptance is mandatory for the selected first-release rollout.
+Avatar release evidence additionally requires T077's actual ball and local rig import checks. T078 must verify the Windows version/runtime/packaging matrix, and T082 floating acceptance is mandatory for the selected first-release rollout.
 
 Sentence-level captions remain permitted temporarily for a clearly identified prototype under Step 182; the final selected word-level caption requirement has not been removed from the product.
 

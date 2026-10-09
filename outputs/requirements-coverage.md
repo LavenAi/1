@@ -101,7 +101,7 @@ Read the full matching Step in the blueprint and the corresponding backlog task 
 | Step 76 | Enable automatic conversation follow-ups by default and allow users to turn them off or on in Settings. | selected | `T035`, `T037`, `T038` | - |
 | Step 77 | After the second unanswered proactive follow-up finishes speaking, wait a further two minutes without user input, then automatically pause the local session's microphone listening and elapsed-session quota accounting. | selected | `T033`, `T035` | - |
 | Step 78 | Attempt to continue the existing local voice session when the user switches tabs/apps or locks the screen, where the browser and device support it. | validation | `T033`, `T061` | Continue in background only where the actual browser/device permits. |
-| Step 79 | Include the companion picture, session status, captions, and pause/resume and stop controls, with a control menu that users can hide and reveal. | refined | `T078`-`T082` | R001 confirms cross-app presence in the first release; first supported OS targets pending. |
+| Step 79 | Include the companion picture, session status, captions, and pause/resume and stop controls, with a control menu that users can hide and reveal. | refined | `T078`-`T082` | R001 confirms cross-app presence in the first release; Windows selected; runtime/version evidence pending; Android floating and other desktop OS clients later. |
 | Step 80 | Keep the user's transcribed text in conversation history without persistently storing the user's recordings or offering playback of those recordings. | selected | `T024`, `T025`, `T049`, `T060` | - |
 | Step 81 | Initially selected temporary caching for generated AI audio and TTS regeneration when unavailable. | superseded | `T027`, `T034` | Step 110 forbids stored/reusable AI audio, replacing the cache choice. |
 | Step 82 | Automatically delete message history after seven days, replacing the proposed 90-day period. | selected | `T049` | - |
@@ -226,7 +226,7 @@ Read the full matching Step in the blueprint and the corresponding backlog task 
 | Initial private trial expected 1-5; no fixed deadline/price | T008, T063-T064 | Expected size is not a registration cap; commercial pricing and public launch remain undecided |
 | Extra languages, full tutor, Pingo-like future persona, official purchased mascot, 3D import | Backlog Later Work; R001 | Later work; first-release local 2D import remains selected |
 | R001: default ball and optional first-release local rigged-2D import | T070-T077; avatar-plan.md | Files local only; format/SDK terms/device evidence pending; no cloud file sync |
-| R001: cross-app floating companion and hideable controls | T078-T082; avatar-plan.md | Confirmed in first release; first supported OS targets pending; T082 required before rollout |
+| R001: cross-app floating companion and hideable controls | T078-T082; avatar-plan.md | Confirmed in first release; Windows selected; runtime/version evidence pending; T082 required before rollout |
 | Team lives in Laos and is exploring global funding | T008; startup-launch-plan.md | No company jurisdiction, grant eligibility, investment, or funded allowance established |
 
 ## Remaining Alignment and Validation

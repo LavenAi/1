@@ -25,7 +25,7 @@ Decision sequence: the owner requested rigged anime and cross-app floating prese
 | Selection | Files do not sync | Propose device-local override and references; other devices retain their valid gallery/ball appearance until separately imported |
 | Limits | One main AI companion | Propose one active imported model per account/device; bytes/file counts/textures/runtime limits need evidence |
 | Motion | Live conversational behavior | Ball design and supported rig mappings pending; not every asset provides mouth/expressions/motions |
-| Floating delivery | Above other applications in the first release is confirmed | First OS targets pending T078; T082 is a required first-release gate |
+| Floating delivery | Windows floating in the first release is confirmed | T078 verifies supported Windows versions/runtime; T082 is required. Android floating and other desktop OS targets are later. |
 
 Proposals are not owner-confirmed details. No multi-runtime compatibility or free commercial SDK release is promised.
 
@@ -59,10 +59,10 @@ Release frame loops, GPU resources, object URLs, and audio-analysis connections 
 
 ## Cross-App Floating Companion
 
-The owner confirmed floating presence and hideable controls in the first release on October 9, 2026. Exact first platforms remain open. An in-page widget does not satisfy presence above other applications.
+The owner confirmed floating presence and hideable controls in the first release on October 9, 2026. Windows is the selected first floating OS. Responsive Android/desktop web support remains unchanged; Android floating and other desktop OS clients are later. An in-page widget does not satisfy presence above other applications.
 
-- Desktop: evaluate transparent/always-on-top clients and OS compatibility; no Tauri/Electron choice yet.
-- Android: validate application-overlay permission, touch routing, foreground microphone/service restrictions, notifications, and explicit pause/exit. Overlay permission does not grant unrestricted background capture.
+- Windows: evaluate transparent/always-on-top client support, Windows versions, packaging, and runtime compatibility; no Tauri/Electron choice yet.
+- Future Android floating: validate application-overlay permission, touch routing, foreground microphone/service restrictions, notifications, and explicit pause/exit. Overlay permission does not grant unrestricted background capture.
 - Browser Document PiP is a potential desktop prototype; it does not establish a transparent, freely positioned pet on every OS/mobile browser.
 - iOS/iPadOS: verify supported system alternatives and limits; do not promise an unrestricted interactive overlay. Label in-app fallbacks accurately.
 - Web and selected floating targets ship in the same first release. Development/staging may be incremental, but a web-only build does not pass the selected first-release gate. T082 must pass for the chosen floating OS targets.
@@ -85,6 +85,6 @@ Primary sources reviewed October 9, 2026; candidate evidence, not Laven implemen
 
 ## Tasks and Acceptance
 
-T070-T077 cover runtime/license evidence, ball, local importer, compatible rig renderer, playback motion, settings/cleanup, device/privacy tests, and avatar acceptance. T078-T082 cover floating feasibility/sequence, shared integration, selected desktop/Android clients, and floating acceptance.
+T070-T077 cover runtime/license evidence, ball, local importer, compatible rig renderer, playback motion, settings/cleanup, device/privacy tests, and avatar acceptance. T078-T082 cover floating feasibility/sequence, shared integration, the first-release Windows client, future Android floating, and floating acceptance.
 
 First-release avatar acceptance requires an actual ball and an actual authorized compatible rig imported and rendered locally, with privacy, error, removal, account-isolation, playback, and target-device evidence. A placeholder upload control or static image does not complete rig import. Missing format/rights are explicit dependencies, not permission to silently defer this selected feature.

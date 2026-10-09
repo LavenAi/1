@@ -129,10 +129,10 @@ Suggested roles are D = developer, P = product/research, X = UX/conversation, Q 
 | T075 | Add local model import/preview/use/replace/remove/default controls and identity/deletion cleanup | D + X | Unassigned | Unassigned | planned | R001; dependencies/decisions and implementation pending |
 | T076 | Verify local import privacy, hostile-package limits, persistence, accessibility, and real-device performance | D + Q + X | Unassigned | Unassigned | planned | R001; dependencies/decisions and implementation pending |
 | T077 | Review first-release ball and optional local rigged-2D import acceptance | D + Q + P | Unassigned | Unassigned | planned | R001; dependencies/decisions and implementation pending |
-| T078 | Evaluate first-release cross-app floating platforms, supported OS matrix, costs, and release prerequisites | D + P | Unassigned | Unassigned | ready | Read-only evaluation ready; not dispatched |
+| T078 | Verify first-release Windows floating runtime, supported versions, packaging, costs, and release prerequisites | D + P | Unassigned | Unassigned | ready | Read-only evaluation ready; not dispatched |
 | T079 | Define and implement the approved floating client/session bridge and local asset boundaries | D | Unassigned | Unassigned | planned | R001; dependencies/decisions and implementation pending |
-| T080 | Build the floating desktop companion for the explicitly selected desktop OS and runtime | D + X | Unassigned | Unassigned | planned | R001; dependencies/decisions and implementation pending |
-| T081 | Build the floating Android companion if Android is selected for the first floating milestone | D | Unassigned | Unassigned | planned | R001; dependencies/decisions and implementation pending |
+| T080 | Build the first-release Windows floating companion using the verified runtime | D + X | Unassigned | Unassigned | planned | R001; dependencies/decisions and implementation pending |
+| T081 | Build the future Android floating companion after a separate milestone is authorized | D | Unassigned | Unassigned | planned | R001; dependencies/decisions and implementation pending |
 | T082 | Review packaging, permissions, recovery, resource use, and release evidence for selected floating targets | D + Q + P | Unassigned | Unassigned | planned | R001; dependencies/decisions and implementation pending |
 
 ## Release Gates
@@ -142,8 +142,8 @@ Suggested roles are D = developer, P = product/research, X = UX/conversation, Q 
 | A - Feasibility | T002-T008: current official model/runtime/auth/email evidence, cost/setup dependencies, material mismatch decisions | Not passed; research not executed |
 | B - Real protected voice | T014-T021 and T028-T029: eligible real account, real Thai/English voice pipeline, measured usage/timing, protected staging | Not passed; setup/funding/live evidence missing |
 | C - Personalization safety | Memory off/forward-only, explicit remember, deleted-fact exclusions, source expiry/delete guards, concurrent account/session checks | Not passed; implementation/tests pending |
-| D - Online private trial | Full selected coverage including T077 avatars, T078 first OS decision, and required T082 floating acceptance; final captions/device/voice evidence; auth/domain/jobs/runbook | Not ready; no deployed product or avatar implementation |
-| E - Floating targets | T078-T082: confirmed first-release inclusion, owner-selected OS targets, actual cross-app clients, permissions, controls, local assets, session/quota guards, packaging/recovery | Not passed; first OS selection and client evidence pending |
+| D - Online private trial | Full selected coverage including T077 avatars, T078 Windows feasibility evidence, and required T082 floating acceptance; final captions/device/voice evidence; auth/domain/jobs/runbook | Not ready; no deployed product or avatar implementation |
+| E - Floating targets | T078-T082: confirmed first-release inclusion, selected Windows target, actual cross-app client, permissions, controls, local assets, session/quota guards, packaging/recovery | Not passed; Windows selected, runtime/version/client evidence pending |
 
 Targets that fail measurement remain explicit issues. Sentence captions do not meet the final word-progress requirement, and the three-second target must include the two-second speech-end wait. A material scope/target change needs a recorded owner decision rather than a hidden exception.
 
@@ -158,7 +158,7 @@ Targets that fail measurement remain explicit issues. Sentence captions do not m
 | B05 | GitHub repo `LavenAi/1` is public; Step 105 planned private storage | T069, T063 | Record owner's explicit public/private direction; do not change visibility automatically |
 | B06 | Accurate Thai word/audio alignment, expressive quality, speed controls, and latency need actual evidence | T004, T028, T041, T059, T061, T068 | Verify capabilities, implement playback-aligned path, measure on target devices; prepare an approved alternative if necessary |
 | B07 | Local rigged-2D format/version, SDK commercial terms, package limits, and model-device evidence pending | T070-T077, T063 | Evaluate Live2D first as a proposal; owner selection and rights/device checks before integration |
-| B08 | Floating is confirmed in the first release; first supported OS targets undecided | T078-T082, T063 | Produce platform/cost matrix and obtain an explicit first supported OS decision |
+| B08 | Windows floating is selected for the first release; runtime/version/packaging evidence pending | T078-T082, T063 | Verify Windows runtime/version/cost matrix; propose the framework from evidence |
 
 B01-B04/B06 are known validation/setup conditions, not claims that a provider is unavailable or a task has failed. T069 is blocked by the specific unresolved visibility alignment. User messages and stored records must not be exposed through troubleshooting evidence.
 
@@ -191,3 +191,4 @@ For each assignment:
 | October 9, 2026 | Initial tracker established; T001 in review, eight research/design tasks ready, T069 blocked, all other tasks planned | No application task dispatched; no live API/device/deployment evidence |
 | October 9, 2026 | R001 adds 13 avatar/floating tasks: total 82; T070/T078 ready for read-only evaluation, 11 additions planned | Default ball + first-release local rigged-2D import confirmed; format/OS/sequence pending; no code or purchase |
 | October 9, 2026 | Owner confirmed floating companion in the first release alongside web, default ball, and local rigged-2D import | T082 now required before T063 rollout; first OS targets pending; no implementation |
+| October 9, 2026 | Owner selected Windows as the first-release floating platform | T080/T082 required for Windows; T081 Android floating is future work; web mobile/desktop scope unchanged; runtime/version evidence pending |
